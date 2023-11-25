@@ -1,0 +1,140 @@
+body{
+display: flex;
+flex-wrap:wrap;
+justify-content: center;
+align-items: center;
+margin: 0;
+
+}
+
+div{
+width: 200px;
+height: 420px;
+padding: 10px;
+margin: 10px 0px 10px 0px;
+box-sizing: border-box;
+
+}
+
+h3{
+    width: 160px;
+    font-family: "SF Pro TC","SF Pro Text","SF Pro Icons","PingFang TC",system-ui,"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    color: #666666;
+    font-weight:normal;
+    text-align: left;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+img{
+    width: 160px;
+    height: 160px;
+    display: flex;
+}
+
+.slogan{
+    font-family: "SF Pro TC","SF Pro Text","SF Pro Icons","PingFang TC",system-ui,"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #DD2726;
+    width: 160px;
+    height: 16px;
+    font-size: 13px;
+    text-align: left;
+    margin: 1px auto;
+}
+
+.price{
+    font-family: "SF Pro TC","SF Pro Text","SF Pro Icons","PingFang TC",system-ui,"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 24px;
+    color: #d62872;
+    width: 160px;
+}
+
+.money{
+    font-family: "SF Pro TC","SF Pro Text","SF Pro Icons","PingFang TC",system-ui,"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    color: #d62872;
+    margin: auto;
+}
+
+.note{
+    font-family: "SF Pro TC","SF Pro Text","SF Pro Icons","PingFang TC",system-ui,"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    color: #999999;
+    margin: 0px 0px 0px 5px;
+    line-height: 15px;
+}
+
+.notice{
+    font: bold 13px/26px Helvetica;
+    color: #969696;
+    text-align: center;
+    display: block;
+    margin-top: -10px;
+}
+
+.rate
+{
+    display:inline-block;
+    width: 180px;
+    height: 30px;
+    
+}
+
+.rate img
+{
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+    display:inline-block;
+    box-sizing: border-box;
+    background-position: center;
+    
+}
+
+.RateCount{
+    
+    font-size: 12px;
+    line-height: 15px;
+    color: #b3b3b3;
+}
+
+.sales{
+    height: 26px;
+    width: 180px;
+    padding: 4px 10px;
+    font-size:13px;
+    color: #454545;
+    text-align: left;
+}
+
+.bottom{
+    background-color: #EEEEEE;
+    width: 170px;
+    height: 26px;
+    margin: 1px auto 0px;
+    border-radius: 3px;
+    display: inline-block;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.icon{
+    background-color: #FF4C76;
+    color: #FFFFFF;
+    font: 12px/26px Helvetica;
+    margin: 1px;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.fast{
+    background-color: #BE0211;
+    color: #FFFFFF;
+    font: 12px/26px Helvetica;
+    margin: 1px;
+    padding: 2px 4px;
+    border-radius: 3px;
+
+}
+

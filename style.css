@@ -1,15 +1,13 @@
-body{
+.products-group{
 display: flex;
 flex-wrap:wrap;
 justify-content: center;
 align-items: center;
 margin: 0;
-
 }
 
-div{
+.product-item{
 width: 200px;
-height: 420px;
 padding: 10px;
 margin: 10px 0px 10px 0px;
 box-sizing: border-box;
@@ -37,7 +35,6 @@ img{
     font-family: "SF Pro TC","SF Pro Text","SF Pro Icons","PingFang TC",system-ui,"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #DD2726;
     width: 160px;
-    height: 16px;
     font-size: 13px;
     text-align: left;
     margin: 1px auto;
@@ -70,7 +67,7 @@ img{
     color: #969696;
     text-align: center;
     display: block;
-    margin-top: -10px;
+    margin-top: -1px;
 }
 
 .rate
@@ -100,7 +97,6 @@ img{
 }
 
 .sales{
-    height: 26px;
     width: 180px;
     padding: 4px 10px;
     font-size:13px;

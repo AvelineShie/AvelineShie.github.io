@@ -11,8 +11,11 @@ width: 200px;
 padding: 10px;
 margin: 10px 0px 10px 0px;
 box-sizing: border-box;
+margin-bottom: auto;
 
 }
+
+
 
 h3{
     width: 160px;
@@ -29,6 +32,7 @@ img{
     width: 160px;
     height: 160px;
     display: flex;
+    margin: auto;
 }
 
 .slogan{
@@ -90,10 +94,10 @@ img{
 }
 
 .RateCount{
-    
     font-size: 12px;
     line-height: 15px;
     color: #b3b3b3;
+    
 }
 
 .sales{
@@ -102,24 +106,24 @@ img{
     font-size:13px;
     color: #454545;
     text-align: left;
+    display: block;
 }
 
 .bottom{
     background-color: #EEEEEE;
-    width: 170px;
+    width: 180px;
     height: 26px;
     margin: 1px auto 0px;
     border-radius: 3px;
     display: inline-block;
     text-align: right;
-    margin-top: 10px;
 }
 
 .icon{
     background-color: #FF4C76;
     color: #FFFFFF;
     font: 12px/26px Helvetica;
-    margin: 1px;
+    margin: 1px 5px 1px 1px;
     padding: 2px 4px;
     border-radius: 3px;
 }

@@ -1,0 +1,122 @@
+/* 先清空預設 */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.wrap{
+    width: 1200px;
+    margin: auto;
+}
+
+/* section-group */
+.section-group{
+    padding: 64px 90px 64px 90px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* title area */
+.section-title{
+    width:746.667;
+    padding: 60px 90px 60px 90px;
+    background-color: #F7F8F9;
+    align-items: center;
+}
+
+h2{
+    font-size: 200%;
+    font-weight: bold;
+    margin-bottom: 24px;
+    text-align: center;
+    color: #052855;
+    font-family: 'Notosans2', "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    
+}
+
+p{
+    text-align: center;
+    font-family: 'Notosans2', "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: #052855;
+}
+
+/* section ALL */
+.section{
+    margin-top: 5px;
+    margin-bottom: 50px;
+    width:746.667;
+    
+}
+
+.content{
+    width: 500.67px;
+    height: 450px;
+    display: inline-block;
+}
+
+.section h2
+{
+    color: #052855;
+    font-size: 175%;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    text-align: left;
+}
+.content p{
+    text-align: left;
+}
+
+.section .pic{
+    width: 465px;
+    height: 420px;
+    float: right;
+    flex-direction: row;
+}
+.section .pic img{
+width: 100%;
+}
+
+
+ul{
+    font-family: 'Notosans2', "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: #052855;
+}
+
+li{
+    width: 45%;
+    list-style: none; 
+    display: inline-block;
+    line-height: 30px;
+    margin-top: 10px;
+}
+
+a{
+    text-decoration: #0061ff;
+    
+}
+
+/* blue circle */
+li:before {
+    content: '';
+    display: inline-block;
+    margin: 0px 12px 0px 0px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #0061FF;
+}
+
+/* bottom-service */
+
+.bottom-items{
+    margin-top: 30px;
+    background-color: #F7F8F9;
+    
+}
+.item{
+    width: 33%;
+    display: inline-block;
+    
+}
+

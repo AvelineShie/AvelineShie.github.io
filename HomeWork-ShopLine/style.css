@@ -45,14 +45,20 @@ p{
     margin-top: 5px;
     margin-bottom: 50px;
     width:746.667;
-    
+}
+
+.section:nth-child(even){
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 .content{
     width: 500.67px;
     height: 450px;
     display: inline-block;
+    
 }
+
 
 .section h2
 {
@@ -67,12 +73,17 @@ p{
     text-align: left;
 }
 
+.content .link{
+    margin-top: 40px;
+}
+
 .section .pic{
-    width: 465px;
+    width: 469px;
     height: 420px;
     float: right;
-    flex-direction: row;
+
 }
+
 .section .pic img{
 width: 100%;
 }
@@ -110,13 +121,30 @@ li:before {
 /* bottom-service */
 
 .bottom-items{
-    margin-top: 30px;
+    margin-bottom: 70px;
     background-color: #F7F8F9;
-    
 }
-.item{
-    width: 33%;
+
+.bottom-items .item{
+    width: 27%;
+    height: 250px;
     display: inline-block;
-    
+    margin-top: 45px;
+    margin-left: 50px;
+}
+
+.item .icon{
+    width: 100px;
+    margin: auto;
+}
+
+.bottom-items .item h3{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.bottom-items .item p{
+    text-align: center;
+    margin-top: 30px;
 }
 

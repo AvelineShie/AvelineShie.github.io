@@ -38,27 +38,33 @@ p{
     text-align: center;
     font-family: 'Notosans2', "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     color: #052855;
+    margin-bottom: 20px;
 }
 
 /* section ALL */
 .section{
-    margin-top: 5px;
     margin-bottom: 50px;
     width:746.667;
+    display: flex;
 }
 
 .section:nth-child(even){
-    display: flex;
     flex-direction: row-reverse;
 }
+
+.section .content {
+    flex: 1; 
+    padding: 35px; 
+    padding-top: 0;
+}
+
+
 
 .content{
     width: 500.67px;
     height: 450px;
     display: inline-block;
-    
 }
-
 
 .section h2
 {
@@ -74,7 +80,7 @@ p{
 }
 
 .content .link{
-    margin-top: 40px;
+    margin-top: 25px;
 }
 
 .section .pic{
@@ -95,7 +101,7 @@ ul{
 }
 
 li{
-    width: 45%;
+    width: 46%;
     list-style: none; 
     display: inline-block;
     line-height: 30px;
@@ -123,17 +129,20 @@ li:before {
 .bottom-items{
     margin-bottom: 70px;
     background-color: #F7F8F9;
+    padding: 64px 90px;
 }
 
 .bottom-items .item{
-    width: 27%;
+    width: 30%;
     height: 250px;
     display: inline-block;
     margin-top: 45px;
-    margin-left: 50px;
+    margin-right: 15px; 
+    margin-left: 15px;
 }
 
-.item .icon{
+
+.bottom-items .item .icon{
     width: 100px;
     margin: auto;
 }

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>
+        h1{
+            font-family: Microsoft JhengHei;
+            font-weight: bold;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>2021年全球晶圓代工市佔率</h1>
+    <script>
+        
+        const globalCountry = {
+            publish: "2021/01/01",
+            version: "1.0",
+            titles : ['排名', '公司', '國別', '市占率%'],
+            data : [
+                {ranking:'1', company:'台積電',country:'台灣', ratio:'53.1'},
+                {ranking:'2', company: '三星電子', country:'韓國', ratio: '17.3'},
+                {ranking:'3', company:'聯電', country:'台灣', ratio:'7.2'},
+                {ranking:'4', company:'格羅方德', country:'美國', ratio:'6.1'},
+                {ranking:'5', company:'中芯國際', country:'中國', ratio:'5.3'},
+                {ranking:'6', company:'華虹半導體', country:'中國', ratio:'2.6'},
+                {ranking:'7', company:'力積電', country:'台灣', ratio:'1.8'},
+                {ranking:'8', company:'世界先進', country:'台灣', ratio:'1.4'},
+                {ranking:'9', company:'高塔半導體', country:'以色列', ratio:'1.4'},
+                {ranking:'10', company:'東部高科', country:'南韓', ratio:'1'}
+            ]
+        };
+
+        //宣告一個空陣列
+        let dataArray = [];
+        let table = document.createElement("table");
+        table.setAttribute("class", "table table-bordered table-striped table-dark");
+        let thead = document.createElement("thead");
+        let tbody = document.createElement("tbody");
+    
+        window.onload = function(){
+            //object=>2D
+            CreateThead(globalCountry.titles);
+            globalCountry.data.forEach(ranking => {
+                let values = Object.values(ranking);
+                dataArray.push(values);
+            });
+
+            CreateTbody(dataArray);
+            document.body.append(table);
+        }
+
+        //要迭代出這個表格的方法有六種:
+
+        //用foreach創建thead
+        function CreateThead(titleArray){
+            let thead_row = document.createElement("tr")
+
+            titleArray.forEach((title, index)=>{
+                let th = document.createElement("th");
+                th.innerText = title;
+                thead_row.append(th);
+            });
+            
+            thead.append(thead_row);
+            table.append(thead);
+
+        }
+        
+        //創建tbody
+        function CreateTbody(dataArray){
+            dataArray.forEach(data=>{
+                let tr = document.createElement("tr");
+                data.forEach(value => {
+                    let td = document.createElement("td");
+                    td.innerText = value;
+                    tr.append(td);
+                });
+                tbody.append(tr);
+            })
+            table.append(tbody);
+        }
+    </script>
+</body>
+</html>

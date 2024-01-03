@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+        font-family: 'MasaFont-Bold';
+        src: url('./MasaFont-Bold.ttf') format("woff")}
+
+        *{
+            margin: 0;
+            padding:0;
+        }
+        body{
+            width: 1200px;
+            margin: auto;
+            background-image: url(./kotsuchi.png);
+            background-size: 20%;
+            font-family: arial,"Microsoft JhengHei","微軟正黑體",sans-serif 
+            
+        }
+        .game-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 70px;
+        }
+
+        h1{
+            font-family: MasaFont-Bold;
+            font-size: 50px;
+        }
+
+        .showGuess, .highlight{
+            font-family: MasaFont-Bold;
+            font-size: 30px;
+        }
+
+        .control{
+            background-color: rgb(254, 255, 217, 0.7);
+            padding: 20px;
+        }
+
+        #input{
+            display: inline-block;
+            width: 100%;
+            height: 50px;
+            border-radius: 5px;
+        }
+
+
+        .keyboard{
+            padding-left: 25px;
+            margin-bottom: 15px;
+            margin-top: 10px;
+        }
+
+        .btnGroup{
+            width: 60px;
+            height: 50px;
+            display: inline-block;
+            margin: 6px;
+            border-radius: 5px;
+        }
+
+        #enter, #showAnswer, #reset, #clear{
+            display: inline-block;
+            width: 60px;
+            height: 35px;
+            margin: 3px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>宇宙大樂透　人人有獎猜起來！</h1>
+        <h2 class="highlight">請輸入1-100之間的數字</h2>
+        <h2 class="showGuess">財富自由我來了！ Fighting!! ファイト!!</h2>
+        <div class="control">
+            <input type="text" id="input" value="">
+            <div class="keyboard">
+            <input type="button" class="btnGroup" value="1">
+            <input type="button" class="btnGroup" value="2">
+            <input type="button" class="btnGroup" value="3">
+            <br>
+            <input type="button" class="btnGroup" value="4">
+            <input type="button" class="btnGroup" value="5">
+            <input type="button" class="btnGroup" value="6">
+            <br>
+            <input type="button" class="btnGroup" value="7">
+            <input type="button" class="btnGroup" value="8">
+            <input type="button" class="btnGroup" value="9">
+            <br>
+            <input type="button" class="btnGroup" value="0">
+            </div>
+            <input type="button" id="enter" value="確認">
+            <input type="button" id="showAnswer" value="偷看答案">
+            <input type="button" id="reset" value="重置">
+            <input type="button" id="clear" value="清除">
+        </div>
+
+    </div>
+
+    <script>
+    
+    //取得所有按鍵
+    const highlight = document.querySelector('.highlight');
+    const btnGroup = document.querySelectorAll('.btnGroup');
+    const inputNum = document.getElementById('input');
+    const enter = document.getElementById('enter');
+    const showAnswer = document.getElementById('showAnswer');
+    const reset = document.getElementById('reset');
+    const showGuess = document.querySelector('.showGuess');
+    
+
+    //每個數字鍵添加事件監聽
+    btnGroup.forEach(((btnItem) => {
+        btnItem.addEventListener('click', ()=>{
+            inputNum.value += btnItem.value;
+        });
+    }));
+
+    //設定解答
+    function getAnswer(){
+    return Math.floor(Math.random() * 101 +1)
+    };
+    let answer = getAnswer();
+
+    //清除輸入框的數值
+    //清除鍵註冊事件監聽
+    function clearValue(){
+        inputNum.value = "";};
+    clear.addEventListener('click', clearValue);
+
+    //設定確認鍵的事件監聽:檢查轉換、顯示所猜的數字
+    enter.addEventListener('click', ()=>{
+        const guessInput = parseInt(inputNum.value, 10);
+        console.log(guessInput);
+        if(!isNaN(guessInput) && guessInput >= 1 && guessInput <= 100 ){
+            showGuess.innerText = `你猜的數字是：${guessInput}`;
+        }
+        else{
+            alert(`超出遊戲範圍囉！請輸入1~100之間的有效整數數字！`);
+            highlight.innerText = `請輸入1~100之間的數字`;
+            clearValue();
+        };
+    }
+    );
+
+    //註冊答案鍵的事件監聽
+    showAnswer.addEventListener('click', ()=>{
+        alert(`答案是: 【${answer}】`);
+    });
+
+    //註冊確認鍵的事件監聽:檢查答案、顯示範圍
+    let min = 1;
+    let max = 100;
+    enter.addEventListener('click',()=>{
+        guessNum = parseInt(inputNum.value, 10);
+        if(guessNum !== answer)
+        {
+            if(guessNum > min && guessNum < answer)
+            {
+                min = guessNum;
+                alert(`數字太小囉！再猜一次！`)
+                
+            }
+            else if(guessNum < max && guessNum > answer)
+            {
+                max = guessNum;
+                alert(`數字太大囉！再猜一次！`)
+            }
+            highlight.innerText = `請輸入${min}-${max}之間的數字`;
+            clearValue();
+        }
+        else if(guessNum === answer){
+            alert(`沒錯！正確解答是【 ${answer}】！恭喜獲得獎金一千萬！`);
+            location.reload();
+        }
+        
+    });
+
+    //重置鍵
+    reset.addEventListener('click', ()=>{
+        location.reload();
+    });
+
+    </script>
+</body>
+</html>

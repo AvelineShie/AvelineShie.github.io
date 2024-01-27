@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+    *{ margin: 0; padding: 0;}
+
+    body{
+            width: 1200px;
+            margin: auto;
+        }
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+    }
+
+    .todo-bkg{
+        margin-top: 30px;
+        width: 745px;
+    }
+
+    .input-group-text{
+        width: 100px;
+    }
+
+    .container-fluid{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .input-group-text{
+        width: 50px;
+    }
+    #EditBtn{
+        width: 67px;
+        
+    }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>待辦事項</h1>
+        <h3>To-Do List</h3>
+        <div class="todo-bkg">
+            <div class="todo-editor">
+                <!-- input -->
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="What to do today?" aria-label="What to do today?" aria-describedby="button-addon2" id="input">
+                    <!-- add button -->
+                    <button class="btn btn-outline-primary" type="button" id="add-button">Add a new task</button>
+                </div>
+                <!-- Todo-List -->
+                <div class="container-fluid" >
+                    <div class="input-group d-none d-inline-flex mb-3" id="task">
+                        <!-- checkbox -->
+                        <div class="input-group-text" >
+                        <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input" id="checkbox">
+                        </div>
+                        <!-- todo -->
+                        <input type="text" class="form-control" aria-label="Text input with checkbox" id="todo-txt">
+                        <!-- edit & delete BTN -->
+                        <button class="btn btn-outline-warning" type="submit" id="EditBtn">Edit</button>
+                        <button class="btn btn-outline-danger" type="submit" id="DeleteBtn">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+
+    const input = document.querySelector('#input');
+    const addButton =document.querySelector('#add-button');
+    const editBtn = document.querySelector('#EditBtn');
+    const deleteBtn = document.querySelector('#DeleteBtn');
+    
+    //添加addButton事件
+    addButton.addEventListener('click', ()=>{
+        if(input.value.trim() === ""){
+            alert("請輸入待辦事項");
+            return;}
+        
+        //資料格式:[{value: "文字內容", completed: false/true}, ...]
+        const newTodoItem = {
+            value: input.value,
+            done: false,
+        };
+
+        newTodoArr.push(newTodoItem);
+        createTodoElement(newTodoItem);
+        savelocalStorage();
+
+        //結束後清空input
+        input.value = "";
+    });
+
+function createTodoElement(newTodoItem){
+        //create input-group
+        let newContainer = document.createElement('div');
+        newContainer.classList.add('input-group', 'd-inline-flex', 'mb-3');
+
+        //create checkbox
+        const checkbox = document.createElement('div');
+        checkbox.classList.add('input-group-text');
+
+        const checkboxInput = document.createElement('input');
+        checkboxInput.classList.add('form-check-input', 'mt-0');
+        checkboxInput.type = 'checkbox';
+        checkboxInput.value = '';
+        checkboxInput.setAttribute('aria-label', 'Checkbox for following text input');
+        // 根據待辦事項的狀態設置 checkbox 的狀態
+        checkboxInput.checked = newTodoItem.done; 
+
+        //add checkbox event
+        checkboxInput.addEventListener('click', ()=>{
+            newTodoItem.done = checkboxInput.checked;
+            savelocalStorage();
+        })
+
+        // create to-do txt
+        const todoInput = document.createElement('input');
+        todoInput.classList.add('form-control');
+        todoInput.type = 'text';
+        // todoInput.value = input.value;
+        // 將待辦事項的文本設為 todoItem 的值
+        todoInput.value = newTodoItem.value; 
+        todoInput.setAttribute('aria-label', 'Text input with checkbox');
+        todoInput.disabled = true;
+
+        //create edit button
+        const editBtn = document.createElement('button');
+        editBtn.classList.add('btn', 'btn-outline-warning');
+        editBtn.type = 'submit';
+        editBtn.textContent = 'Edit';
+
+        //add editBtn event
+        editBtn.addEventListener('click', ()=>{
+        todoInput.disabled = false;
+        editBtn.style.display = 'none';
+        saveBtn.style.display = 'block';
+        })
+
+        //create save button
+        const saveBtn = document.createElement('button');
+        saveBtn.classList.add('btn', 'btn-outline-success');
+        saveBtn.type = 'submit';
+        saveBtn.textContent = 'Save';
+        saveBtn.style.display = 'none'; 
+
+        //add saveBtn event
+        saveBtn.addEventListener('click', ()=>{
+        todoInput.disabled = true;
+        saveBtn.style.display = 'none';
+        editBtn.style.display = 'block';
+        newTodoItem.value = todoInput.value; //update data
+        savelocalStorage();
+        })
+
+        //create delete button
+        const deleteBtn = document.createElement('button');
+        deleteBtn.classList.add('btn', 'btn-outline-danger');
+        deleteBtn.type = 'submit';
+        deleteBtn.textContent = 'Delete';
+
+        //add delete event
+        deleteBtn.addEventListener('click', ()=>{
+            //delete render
+            newContainer.remove(); 
+            //delete localStorage 
+            newTodoArr.splice(newTodoArr.indexOf(newTodoItem), 1);
+            savelocalStorage();
+        })
+
+        // append 父層
+        checkbox.appendChild(checkboxInput);
+        newContainer.appendChild(checkbox);
+        newContainer.appendChild(todoInput);
+        newContainer.appendChild(editBtn);
+        newContainer.appendChild(saveBtn);
+        newContainer.appendChild(deleteBtn);
+
+        // append to newContainer 
+        document.querySelector(".container-fluid").appendChild(newContainer);
+}
+
+
+//load localStorage
+//或用IIEF在開網頁時立即載入:(function () {...})();
+window.addEventListener('load', getlocalStorage); 
+
+//create localStorageKey
+const localStorageKey = "To-Do";
+const newTodoArr =[];
+let newTodoItem, newTodoArrString;
+
+//transform json to localStorage
+function savelocalStorage(){
+    const newTodoArrString = JSON.stringify(newTodoArr);
+    localStorage.setItem(localStorageKey, newTodoArrString);
+}
+
+//get localStorage Data 
+function getlocalStorage(){
+    // const storedDataArr = JSON.parse(localStorage.getItem('To-Do'))||[];
+    const storedData = localStorage.getItem('To-Do');
+    const storedDataArr = JSON.parse(storedData)||[];
+    storedDataArr.forEach(element => {
+        //render
+        createTodoElement(element); 
+    });
+}
+
+//delete Data
+function removelocalStorage(){
+    newTodoArr.splice(index, 1); 
+}
+
+// localStorage.clear(); 清除全部
+//有空補Orz
+
+    </script>
+</body>
+</html>
+

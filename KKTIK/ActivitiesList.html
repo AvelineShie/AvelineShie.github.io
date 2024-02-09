@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>活動主控台</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet">
     <script src="https://kit.fontawesome.com/edf62d94b1.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
         :root {
             --main-color: #77A88D;
@@ -47,7 +47,7 @@
         }
 
         #header-nav a:hover {
-            background-color: var(--main-color-hover);
+            background-color: var(--main-color);
         }
 
         #header-nav #header-nav-logo {
@@ -80,6 +80,8 @@
 
         #header-nav-search-input {
             border: none;
+            outline: none;
+            box-shadow:0 0px 0px;
             width: 200px;
             height: 40px;
             font-size: inherit;
@@ -98,7 +100,7 @@
         }
         /* =============nav end ================== */
 
-        /* ==============side-menu start============== */
+        /* ==============side menu start============== */
         html,body{
         height: 100%;
         }
@@ -141,6 +143,7 @@
             color: #fff;
             text-align: center;
         }
+        /* ================side menu end================ */
     </style>
 </head>
 <body>
@@ -165,13 +168,13 @@
                     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     選擇組織
                     </a>
-                    <!-- <ul class="dropdown-menu">
+                    <ul class="dropdown-menu">
                         <li>組織列表</li>
                         <li><a class="dropdown-item" href="#">組織名稱(暫)</a></li>
                         <li><a class="dropdown-item" href="#">組織名稱(暫)</a></li>
                         <li><a class="dropdown-item" href="#"><i class="fa-regular fa-circle-plus"></i>建立新組織</a></li>
                         
-                    </ul> -->
+                    </ul>
                 </div>
                 <a href="">會員帳號</a>
             </div>
@@ -190,7 +193,7 @@
                     <li><a class="dropdown-item" href="#">發佈活動</a></li>
                 </ul>
             </div>
-            <a href="#"><i class="fa-solid fa-chalkboard-user"></i>活動公開頁面</a>
+            <a href="#"><i class="fa-solid fa-chalkboard-user  "></i>活動公開頁面</a>
             <p>活動資訊</p>
             <a href="#"><i class="fa-solid fa-users"></i>報名人列表</a>
             <a href="#"><i class="fa-solid fa-cart-arrow-down"></i>訂單</a>
@@ -203,6 +206,34 @@
             <a href="#"><i class="fa-solid fa-envelope"></i>通知信件</a>
             <a href="#"><i class="fa-solid fa-circle-arrow-up"></i>升級活動</a>
         </nav>
+
+        <!-- =============header=========== -->
+        <header>
+            <a href=""><i class="fa-solid fa-arrow-left"></i></a>
+            <h1>
+                <span class="activitiesName">活動名稱</span>
+                <span class="activitiesTitle">大船入港 (暫)</span>
+            </h1>
+            <div class="subheader">
+                <div class="overview">
+                    <h2>綜覽</h2>
+                </div>
+                <div class="ticket-sales">
+                    <span class="in-block">可售</span>
+                    <span class="block-quantity">50</span>
+                    <span class="sold">已售</span>
+                    <span class="sold-quantity">5</span>
+                    <span class="remain">剩餘</span>
+                    <span class="remain-quantity">45</span>
+                </div>
+                <img src="" alt="icon">
+            </div>
+
+            <div class="sales-content">
+
+            </div>
+
+        </header>
     </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </body>

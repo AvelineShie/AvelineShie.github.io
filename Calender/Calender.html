@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calender</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+    *{
+    margin: 0;
+    padding: 0;
+    }
+
+    .main{
+        width: 1200px;
+        margin: auto;
+        padding: 45px;
+        /* display: flex; */
+        flex-direction: column;
+    }
+
+    .titleArea{
+        text-align: center;
+    }
+
+    .btn-group{
+        padding-bottom: 30px;
+    }
+
+    .btn-outline-info{
+        
+    }
+
+    #week{
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+    }
+    .daysArea>*{
+        height: 100px;
+    }
+
+    .row-cols-7>* {
+        flex: 0 0 auto;
+        width: 14.2857143%;
+    }
+
+    li:hover{
+        cursor: pointer;
+    }
+    
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="titleArea">
+        <h1 class="Month">月份</h1>
+    </div>
+
+    <!-- 上下月、今日切換鍵 -->
+    <div class="btn-group" role="group" aria-label="Basic outlined example">
+        <button type="button" class="btn btn-outline-primary last-month-Btn">Last Month</button>
+        <button type="button" class="btn btn-outline-primary todayBtn">Today</button>
+        <button type="button" class="btn btn-outline-primary next-month-Btn">Next Month</button>
+    </div>
+
+    <!-- add todo list -->
+    <button type="add-button" class="btn btn-outline-info">+</button>
+    
+    <!-- 月曆區 -->
+    <div class="calendar">
+        <div class= "row row-cols-7 weekArea g-0">
+            <div class="border col" id="week">SUN</div>
+            <div class="border col" id="week">MON</div>
+            <div class="border col" id="week">TUE</div>
+            <div class="border col" id="week">WED</div>
+            <div class="border col" id="week">THU</div>
+            <div class="border col" id="week">FRI</div>
+            <div class="border col" id="week">SAT</div>
+        </div>
+        <div class="row row-cols-7 daysArea g-0">
+            <div class="border col"></div>
+            <div class="border col"></div>
+            <div class="border col"></div>
+            <div class="border col"></div>
+            <div class="border col"></div>
+            <div class="border col"></div>
+            <div class="border col"></div>
+            <div class="border col"></div>
+            <div class="border col"></div>
+            <div class="border col"></div>
+            <div class="border col"></div>
+            <div class="border col"></div>
+            <div class="border col"></div>
+            <div class="border col"></div>
+            <div class="border col"></div>
+            <div class="border col"></div>
+            <div class="border col"></div>
+            <div class="border col"></div>
+            <div class="border col"></div>
+            <div class="border col"></div>
+            <div class="border col"></div>
+            <div class="border col"></div>
+            <div class="border col"></div>
+            <div class="border col"></div>
+            <div class="border col"></div>
+            <div class="border col"></div>
+            <div class="border col"></div>
+            <div class="border col"></div>
+            <div class="border col"></div>
+            <div class="border col"></div>
+            <div class="border col"></div>
+            <div class="border col"></div>
+            <div class="border col"></div>
+            <div class="border col"></div>
+            <div class="border col"></div>
+            
+        </div>
+    </div>
+
+    <!-- Create Modal -->
+    <div
+        class="modal fade"
+        id="create_todo_modal"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">新增行程</h5>
+            <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+            ></button>
+            </div>
+            <div class="modal-body">
+            <div class="mb-3">
+                <label for="date_input" class="form-label">日期</label>
+                <input
+                type="date"
+                class="form-control"
+                id="date_input"
+                aria-describedby="datetimeHelp"
+                />
+                <div id="datetimeHelp" class="form-text">請選擇日期.</div>
+            </div>
+            <div class="mb-3">
+                <label for="todo_item_input" class="form-label">待辦事項</label>
+                <textarea class="form-control" id="todo_item_input"></textarea>
+            </div>
+            </div>
+            <div class="modal-footer">
+            <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+            >
+                取消
+            </button>
+            <button
+                type="button"
+                class="btn btn-primary"
+                onclick="createTodo()"
+                data-bs-dismiss="modal"
+            >
+                新增
+            </button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Update Modal -->
+    <div
+    class="modal fade"
+    id="update_todo_modal"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    tabindex="-1"
+    aria-labelledby="staticBackdropLabel2"
+    aria-hidden="true"
+    >
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel2">編輯行程</h5>
+        <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+        ></button>
+        </div>
+        <div class="modal-body">
+        <div class="mb-3">
+            <label for="date_input" class="form-label">日期</label>
+            <input
+            type="date"
+            class="form-control"
+            id="date_update_input"
+            aria-describedby="datetimeHelp2"
+            disabled
+            />
+        </div>
+        <div class="mb-3">
+            <label for="todo_item_update_input" class="form-label"
+            >待辦事項</label
+            >
+            <textarea
+            class="form-control"
+            id="todo_item_update_input"
+            ></textarea>
+        </div>
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-success update-btn">
+            更新
+        </button>
+        <button type="button" class="btn btn-danger delete-btn">
+            刪除
+        </button>
+        <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+        >
+            取消
+        </button>
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<script src="./main.js"></script>
+</body>
+</html>

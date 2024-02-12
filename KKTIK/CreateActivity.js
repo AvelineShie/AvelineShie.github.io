@@ -21,6 +21,9 @@ organizeList.addEventListener("change", function() {
         establishBtn.style.display = "block";
         newActivityRadio.checked = true;
     }
+    else{
+        location.reload(); //略蠢,再想想
+    }
 });
 
 ActivityItem.addEventListener('click',()=>{

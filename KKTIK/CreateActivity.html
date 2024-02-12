@@ -7,226 +7,69 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet">
     <script src="https://kit.fontawesome.com/edf62d94b1.js" crossorigin="anonymous"></script>
-    <style>
-        /* 左邊預留導覽列空間180px */
-        :root {
-            --main-color: #77A88D;
-            --main-color-hover: #77A88D;
-            --main-font-size: 15px;
-            --common-border: 1px #ddd solid;
-        }
-        
-        *{
-            margin: 0; 
-            padding:0;
-            vertical-align: baseline;
-        }
-
-        .container{
-            margin: auto;
-            width: 1200px;
-        }
-        .ActivityContainer{
-            display: flex;
-            flex-direction: column;
-            margin-left: 180px;
-            margin-top: 30px;
-        }
-
-        .ActivityContainer>*{
-            padding: 10px;
-            color: #333333;
-        }
-
-        .ActivityContainer:not(h1,h2,h3){
-            font-size: var(--main-font-size);
-        }
-
-        h3::after{
-            width: 100px;
-            content: "";
-            border-top: 1px solid black;
-        }
-
-        #organizeList{
-            display: inline-block;
-            width: 100px;
-            height: 30px;
-            margin: 10px;
-        }
-
-        a{color: var(--main-color)}
-
-        .establishBtn{
-            width: 70px;
-            height: 35px;
-            line-height: 20px;
-            background-color:var(--main-color);
-            color:white;
-            border:none;
-            border-radius:5px;
-            margin-left: 10px;
-        }
-
-/* nav start======> */
-#header-nav {
-            background-color: var(--main-color);
-        }
-
-        .d-flex {
-        display: flex;
-        }
-
-        #header-nav a {
-            color: #fff;
-            padding: 13px 20px;
-        }
-
-        #header-nav a:hover {
-            background-color: var(--main-color);
-        }
-
-        #header-nav #header-nav-logo {
-            padding-top: 15x;
-            padding-left: 20px;
-        }
-
-        #header-nav img {
-            height: 20px;
-        }
-
-        a {
-            display: inline-block;
-            text-decoration: none;
-        }
-
-        #header-nav-search-div {
-            height: 40px;
-            background-color: #fff;
-        }
-
-        #header-nav-search-div img{
-            display: flex;
-            justify-content: center;
-        }
-
-        #header-nav-magnifier-icon {
-            padding: 0px 5px 0px 10px;
-        }
-
-        #header-nav-search-input {
-            border: none;
-            outline: none;
-            box-shadow:0 0px 0px;
-            width: 200px;
-            height: 40px;
-            font-size: inherit;
-        }
-
-        .fa-caret-down{
-            margin-left: 10px;
-        }
-
-        .fa-circle-plus{
-            margin-right: 5px;
-            background-color: #fff;
-            color: var(--main-color);
-            border-radius: 50%;
-            font-family: Font Awesome 5 Pro;
-        }
-        /* =============nav end ================== */
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="./CreateActivity.css">
 </head>
 <body>
-    <!-- header-nav -->
-    <nav id="header-nav" class="d-flex">
-        <div class="width d-flex justify-content-between">
-            <div id="header-nav-left" class="d-flex align-items-center">
-                <a href="" id="header-nav-logo">
-                    <img src="./imgs/nav_logo.png" alt="">
-                </a>
-                <a href="">我的票卷</a>
-                <a href="">探索活動</a>
-                <div id="header-nav-search-div" class="d-flex align-items-center">
-                    <img src="./imgs/magnifier_icon.svg" alt="" id="header-nav-magnifier-icon">
-                    <input type="text" id="header-nav-search-input" placeholder="搜尋活動">
-                </div>
-            </div>
-            <div id="header-nav-right" class="d-flex align-items-center">
-                <a href=""><i class="fa-regular fa-circle-plus"></i>建立活動</a>
-
-                <div class="dropdown">
-                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    選擇組織
+<div class="wrap">
+        <!-- header-nav -->
+        <nav id="header-nav" class="d-flex">
+            <div class="width d-flex justify-content-between">
+                <div id="header-nav-left" class="d-flex align-items-center">
+                    <a href="" id="header-nav-logo">
+                        <img src="./imgs/nav_logo.png" alt="">
                     </a>
-                    <ul class="dropdown-menu">
-                        <li>組織列表</li>
-                        <li><a class="dropdown-item" href="#">組織名稱(暫)</a></li>
-                        <li><a class="dropdown-item" href="#">組織名稱(暫)</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fa-regular fa-circle-plus"></i>建立新組織</a></li>
-                        
-                    </ul>
-                </div>
-                <!-- <a href="">會員帳號</a> -->
-                <div class="dropdown" id="number-dropdown">
-                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    會員帳號
-                    </a>
-                    <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
+                    <a href="">我的票卷</a>
+                    <a href="">探索活動</a>
+                    <div id="header-nav-search-div" class="d-flex align-items-center">
+                        <img src="./imgs/magnifier_icon.svg" alt="" id="header-nav-magnifier-icon">
+                        <input type="text" id="header-nav-search-input" placeholder="搜尋活動">
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
-    <!-- nav-end -->
-
-    <div class="container">
-        <!-- 從首頁導覽列進入的建立活動 -->
-        <div class="empty">
-        <!-- 留白:從組織進去會多出一排組織名稱 -->
-        </div>
-        <div class="ActivityContainer">
-            <h1>建立活動</h1>
-            <h2>選擇活動舉辦單位</h2>
-            <p>您尚未選擇組織，請選取此活動所屬之組織：</p>
-            <select name="所屬組織" id="organizeList">
-                <option value=""></option>
-                <option value=""></option>
-            </select>
-
-            <!-- Hide the organizations while not selected below -->
-            <div class="new-activity">
-                <input type="radio"id="NewActiviy">
-                <label for=""> 全新的活動</label>
+        </nav>
+        <!-- nav-end -->
+    
+        <div class="container">
+            <!-- 從首頁導覽列進入的建立活動 -->
+            <div class="empty">
+            <!-- 留白:從組織進去會多出一排組織名稱 -->
             </div>
-            <p>您也可以直接套用既有的活動設定（基本資料、表單、票種），節省您寶貴的時間</p>
-            <h3 class="lined">以最近舉辦的活動做為樣板</h3>
-                <!-- Display blank when no activities exist -->
-                <p>尚無活動可做樣板</p>
-                <!-- Show activity items when the activities exist-->
-                <div class="activity-item">
-                    <label for=""><input type="radio" id="ActivityItem"> 活動名稱</label>
+            <div class="ActivityContainer">
+                <h1>建立活動</h1>
+                <h2>選擇活動舉辦單位</h2>
+                <p>您尚未選擇組織，請選取此活動所屬之組織：</p>
+                <select name="所屬組織" id="organizeList">
+                    <option value="option1"></option>
+                    <option>Mafia</option>
+                    <option>Freemasonry</option>
+                </select>
+                <!-- Hide the organizations while not selected below -->
+                <div class="new-activity">
+                    <input type="radio"  class="new-activiy-radio">
+                    <label> 全新的活動</label>
                 </div>
-            
-            <div class="TOSzone">
-                <label for="">
-                    <input type="checkbox" class="checkbox"> 我已經閱讀並同意 
-                    <a href="">主辦單位服務條款</a> 與 <a href="">隱私權政策</a>
-                </label>
+                <div class="activity-select">
+                    <p class="notice">您也可以直接套用既有的活動設定（基本資料、表單、票種），節省您寶貴的時間</p>
+                    <h3 class="lined">以最近舉辦的活動做為樣板</h3>
+                    <!-- Show activity items when the activities exist-->
+                    <div class="activity-item">
+                        <!-- Display blank when no activities exist -->
+                        <p>尚無活動可做樣板</p>
+                        <label><input type="radio" id="ActivityItem"> 活動名稱(暫)</label>
+                    </div>
+                </div>
+                <div class="TOSzone">
+                    <label for="">
+                        <input type="checkbox" class="checkbox"> 我已經閱讀並同意 
+                        <a href="">主辦單位服務條款</a> 與 <a href="">隱私權政策</a>
+                    </label>
+                </div>
+                <input class="establishBtn" type="button" value="建立"/>
             </div>
-            <br>
-            <input class="establishBtn" type="button" value="建立"/>
         </div>
-    </div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<script>
-
-
-</script>
+<script src="./CreateActivity.js"></script>
 </body>
 </html>

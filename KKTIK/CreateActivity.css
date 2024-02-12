@@ -7,13 +7,6 @@
     --common-border: 1px #ddd solid;
 }
 
-/* .wrap {
-    min-width: 768px;
-    max-width: 1200px;
-    margin: 0 auto; 
-    讓 .wrap 在水平方向置中 
-} */
-
 @media screen and (min-width: 768px) {
     .wrap{ 
         min-width: 960px; 
@@ -25,7 +18,6 @@
 *{
     margin: 0; 
     padding:0;
-    /* vertical-align:baseline; */
 }
 
 /* nav start======> */

@@ -4,9 +4,10 @@
         display: none;
     }
     .main-content {
-        margin-left: 0; /* 將主要內容向左移動，以覆蓋側邊欄的位置 */
+        margin-left: 0; 
     }
 }
+
 
 :root {
     --main-color: #77A88D;
@@ -127,6 +128,7 @@ nav p{
 .main-content{
     width: 100%;
     position:relative;
+    color: #333;
 }
 
 /* ----------header start--------- */
@@ -161,6 +163,7 @@ header h1{
     display: flex;
     justify-content: center; 
     align-items: center; 
+    text-decoration: none;
 }
 /* ----------header end---------- */
 

@@ -126,10 +126,11 @@ nav p{
 
 /* ------------main content------------ */
 .main-content{
-    width: 100%;
+    /* width: 100%; */
     position:relative;
     color: #333;
     margin-bottom: 80px;
+    width: calc(100% - 200px);
 }
 
 /* ----------header start--------- */
@@ -215,20 +216,12 @@ header h1{
     margin-bottom: -2px;};
 
 
-    /* .sold>quantity{}
-    .remain >quantity, */
-    .subheader .ticket-sales .sales-data .quantity{
+    .number{
     font-size: 23px;
-    background-color: red;
+    color: red;
     font-family: 'Times New Roman';
     font-weight: bold;
     }
-
-    /* .sales-data .quantity  */
-    
-    /* letter-spacing: 1.59px;
-    padding-right: 2px; */ */
-
 
 /* ----------.subheader end ----------*/
 
@@ -292,10 +285,7 @@ table>tbody>tr>td, table>tfoot>tr>td{
 }
 
 .subscriber-data{
-    /* height: 60px; */
-    /* width: 100%; */
     line-height: 1.33333333;
-    /* padding: 19px; */
     margin-bottom: 20px;
     background-color: #f5f5f5;
     border: 1px solid #f5f5f5;

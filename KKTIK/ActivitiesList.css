@@ -129,11 +129,12 @@ nav p{
     width: 100%;
     position:relative;
     color: #333;
+    margin-bottom: 80px;
 }
 
 /* ----------header start--------- */
-header, .date-Place, .tickets-sales-status, .sales-method-statistics, .amount-statistics, .current-order {
-    margin: 25px;
+header, .date-Place, .tickets-sales-status, .sales-method-statistics, .amount-statistics, .subscriber-data {
+    margin: 26px;
 }
 
 header h1{
@@ -185,6 +186,11 @@ header h1{
     flex-grow: 1; /* 讓 h2 元素能夠佔據剩餘的空間 */
 }
 
+.subheader h2{
+    color: #333;
+    font-size: 26px;
+}
+
 .subheader .pie-chart{
     width: 40px;
     height: 40px;
@@ -209,14 +215,20 @@ header h1{
     margin-bottom: -2px;};
 
 
-.subheader .ticket-sales .sales-data .quantity {
+    /* .sold>quantity{}
+    .remain >quantity, */
+    .subheader .ticket-sales .sales-data .quantity{
     font-size: 23px;
     background-color: red;
-    /* font-family: 'Times New Roman'; 
+    font-family: 'Times New Roman';
     font-weight: bold;
-    letter-spacing: 1.59px;
-    padding-right: 2px; */
-}
+    }
+
+    /* .sales-data .quantity  */
+    
+    /* letter-spacing: 1.59px;
+    padding-right: 2px; */ */
+
 
 /* ----------.subheader end ----------*/
 
@@ -224,40 +236,71 @@ header h1{
     margin-right: 10px;
 }
 
-.date-Place p{
+.date-place{
+    margin-top: 130px;
+    margin-left: 20px;
+}
+
+.date-place p{
     margin: 10px;
 }
 
 /* ----- sales lists start ----- */
 .sales-list{
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 
-.tickets-sales-status, .sales-method-statistics, .amount-statistics, .current-order{
+.tickets-sales-status, .sales-method-statistics, .amount-statistics, .subscriber-data{
     margin-top: 20px;
 }
 
-.tickets-sales-status>table, .sales-method-statistics>table, .amount-statistics>table, .current-order>table{
+.tickets-sales-status>table, .sales-method-statistics>table, .amount-statistics>table, .subscriber-data>table{
     width: 100%;;
     text-align: end;
 }
 
-/* .tickets-sales-status, .sales-method-statistics, .amount-statistics,  */
 table>thead>tr>th{
     border-bottom: #ccc 1px solid;
-    margin:8px;
+    line-height: 1.33333333;
+    vertical-align: middle;
+    padding: 3px 3px;
 }
 
 table>tbody>tr>td, table>tfoot>tr>td{
     border-top: #efefefed 1px solid;
-    margin:5px;
+    line-height: 1.33333333;
+    vertical-align: middle;
+    word-break: break-all;
+    padding: 3px 5px;
 }
 
 .tickets-sales-status>h3, .sales-method-statistics>h3, .amount-statistics>.amount-statistics-head>h3, .current-order>h3{
+    font-size: 24px;
     display: inline-block;
     border-bottom: 1px solid #999; 
     color: initial; /* 保持文字顏色 */
     margin: 15px 0px;
+}
+
+.current-order>h3{
+    margin-left: 23px;
+    margin-bottom: -20px;
+}
+
+.current-order{
+    width: 100%;
+}
+
+.subscriber-data{
+    /* height: 60px; */
+    /* width: 100%; */
+    line-height: 1.33333333;
+    /* padding: 19px; */
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
 }
 
 .amount-statistics>.amount-statistics-head{
@@ -265,16 +308,10 @@ table>tbody>tr>td, table>tfoot>tr>td{
     justify-content: space-between;
 }
 
-/* ----- sales lists end ----- */
-.order{
-    height: 60px;
-    width: 1030px;
-    min-height: 20px;
-    padding: 19px;
-    margin-bottom: 20px;
-    background-color: #f5f5f5;
-    border: 1px solid #e3e3e3;
-    border-radius: 4px;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+.text-muted{
+    background-color: #e2dfdf;
 }
+
+/* ----- sales lists end ----- */
+
 

@@ -32,31 +32,36 @@
     
         <div class="container">
             <!------------ side menu start ------------>
-            <div class="sideBarMenu">
-                <nav>
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="release-btn">
-                            未發佈
-                        </button>
-                        <ul class="dropdown-menu" >
-                            <li><a class="dropdown-item" href="#">發佈活動</a></li>
-                        </ul>
-                    </div>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i>活動公開頁面</a>
-                    <p>活動資訊</p>
-                    <a href="#"><i class="fa-solid fa-users"></i>報名人列表</a>
-                    <a href="#"><i class="fa-solid fa-cart-arrow-down"></i>訂單</a>
-                    <a href="#"><i class="fa-regular fa-clipboard"></i>簽到簿</a>
-                    <p>活動設定</p>
-                    <a href="#"><i class="fa-solid fa-info"></i>基本資料</a>
-                    <a href="#"><i class="fa-solid fa-location-dot"></i>活動地點</a>
-                    <a href="#"><i class="fa-solid fa-tags"></i>票種資訊</a>
-                    <a href="#"><i class="fa-regular fa-pen-to-square"></i>報名表單</a>
-                    <a href="#"><i class="fa-solid fa-envelope"></i>通知信件</a>
-                    <a href="#"><i class="fa-solid fa-circle-arrow-up"></i>升級活動</a>
-                </nav>
-            </div>
-            <!--------- side menu end ------------>
+        <div class="sideBarMenu">
+            <nav>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false" id="publish-btn">
+                        未發佈
+                    </button>
+                    <ul class="dropdown-menu" id="publish-btn-modal">
+                        <li><a class="dropdown-item" href="#">發佈活動</a></li>
+                    </ul>
+                </div>
+
+                <div><a href="#"><i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i>活動公開頁面</a></div>
+                <div><a href="#"><i class="fa-solid fa-gauge-simple"></i>活動主控台</a></div>
+                <p>活動資訊</p>
+                <div><a href="#"><i class="fa-solid fa-users fa-sm"></i>報名人列表</a></div>
+                <div><a href="#"><i class="fa-solid fa-cart-arrow-down fa-sm"></i>訂單</a></div>
+                <div><a href="#"><i class="fa-regular fa-clipboard fa-sm"></i>簽到簿</a></div>
+
+                <p>活動設定</p>
+                <div><a href="#"><i class="fa-solid fa-circle-info fa-sm"></i>基本資料</a></div>
+                <div><a href="#"><i class="fa-solid fa-location-dot fa-sm"></i>活動地點</a></div>
+                <div><a href="#"><i class="fa-solid fa-tags fa-sm"></i>票種資訊</a></div>
+                <div><a href="#"><i class="fa-regular fa-pen-to-square fa-sm"></i>報名表單</a></div>
+                <div><a href="#"><i class="fa-solid fa-envelope fa-sm"></i>通知信件</a></div>
+                <div><a href="#"><i class="fa-solid fa-circle-arrow-up fa-sm"></i>升級活動</a></div>
+            </nav>
+            </nav>
+        </div>
+        <!--------- side menu end ------------>
         
             <!---------- main content  start------------->
             <div class="main-content">
@@ -81,10 +86,6 @@
                         <div class="tag-header">
                             <div class="btn-group">
                                 <button type="button" class="btn btn-primary" id="send-email"><i class="fa-solid fa-envelope"></i>寄信</button>
-                                <!-- tag button -->
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="tagBtn"><i class="fa-solid fa-tags"></i>
-                                    標籤
-                                </button>
                                 <!-- Modal -->
                                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
@@ -112,6 +113,16 @@
                                     <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
                                     <label class="btn btn-outline-primary" for="btnradio2">待繳費</label>
                                     <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        已取消
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">所有已取消</a></li>
+                                            <li><a class="dropdown-item" href="#">已取消，系統未退款</a></li>
+                                            <li><a class="dropdown-item" href="#">已取消，系統已退款</a></li>
+                                        </ul>
+                                    </div>
                                     <label class="btn btn-outline-primary" for="btnradio3">全部</label>
                                     <div class="dropdown" >
                                         <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -125,7 +136,7 @@
                                                 </li>
                                             </div>
                                             <li><input type="checkbox" id="registration-id" name="registration-id" checked />
-                                                <label for="registration-id">報名序號</label>
+                                                <label for="registration-id">訂單編號</label>
                                             </li>
                                             <li><input type="checkbox" id="name" name="name" checked />
                                                 <label for="name">姓名</label>
@@ -134,19 +145,19 @@
                                                 <label for="email">Email</label>
                                             </li>
                                             <li><input type="checkbox" id="cell-phone" name="cell-phone" checked />
-                                                <label for="cell-phone">手機</label>
+                                                <label for="cell-phone">繳費方式</label>
                                             </li>
                                             <li><input type="checkbox" id="contact-name" name="contact-name" checked />
-                                                <label for="contact-name">聯絡人姓名</label>
+                                                <label for="contact-name">票數</label>
                                             </li>
                                             <li><input type="checkbox" id="contact-email" name="contact-email" checked />
-                                                <label for="contact-email">聯絡人email</label>
+                                                <label for="contact-email">金額</label>
                                             </li>
                                             <li><input type="checkbox" id="ticket-type" name="ticket-type" checked />
-                                                <label for="ticket-type">票種</label>
+                                                <label for="ticket-type">郵資及其他費用</label>
                                             </li>
                                             <li><input type="checkbox" id="tag" name="tag" checked />
-                                                <label for="tag">標籤</label>
+                                                <label for="tag">手續費</label>
                                             </li>
                                             <div class="submit">
                                                 <input class="btn btn-primary" type="submit" value="套用">
@@ -168,38 +179,47 @@
                         <thead>
                         <tr>
                             <th scope="col"><input type="checkbox"></th>
-                            <th scope="col">報名序號</th>
+                            <th scope="col">訂單編號</th>
                             <th scope="col">姓名</th>
                             <th scope="col">Email</th>
-                            <th scope="col">聯絡人姓名</th>
-                            <th scope="col">聯絡人Email</th>
-                            <th scope="col">票種</th>
-                            <th scope="col">標籤</th>
+                            <th scope="col">繳費方法</th>
+                            <th scope="col">票數</th>
+                            <th scope="col">金額</th>
+                            <th scope="col">郵資及其他費用</th>
+                            <th scope="col">手續費</th>
                             <th scope="col">動作</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
                             <th scope="col"><input type="checkbox"></th>
-                            <td>1</td>
+                            <td>135506220</td>
                             <td>Mark</td>
                             <td>777666ABC@gmial.com</td>
-                            <td>Mark他老杯</td>
-                            <td>777666ABC@gmial.com</td>
-                            <td>一般票</td>
-                            <td></td>
-                            <td><button>明細</button></td>
+                            <td>1</td>
+                            <td>TWD$350</td>
+                            <td>TWD$0</td>
+                            <td>TWD$0</td>
+                            <td>TWD$0</td>
+                            <td>
+                                <button>訂單明細</button>
+                                <button>取消訂單</button>
+                            </td>
                         </tr>
                         <tr>
                             <th scope="col"><input type="checkbox"></th>
-                            <td>2</td>
+                            <td>135506228</td>
                             <td>Mary</td>
                             <td>888222ABC@gmial.com</td>
-                            <td>Mary她阿嬤</td>
-                            <td>888222ABC@gmial.com</td>
-                            <td>搖滾區</td>
-                            <td></td>
-                            <td><button>明細</button></td>
+                            <td>1</td>
+                            <td>TWD$3000</td>
+                            <td>TWD$0</td>
+                            <td>TWD$0</td>
+                            <td>TWD$0</td>
+                            <td>
+                                <button>訂單明細</button>
+                                <button>取消訂單</button>
+                            </td>
                         </tr>
                         </tbody>
                     </table>

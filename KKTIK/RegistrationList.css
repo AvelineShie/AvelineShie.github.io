@@ -95,60 +95,70 @@ max-width: 100%;
 
 /* ==============side menu start============== */
 .sideBarMenu{
-width: 200px;
-background-color: #518f6d;
-flex-direction: column;
-}
+    width: 200px;
+    background-color: #518f6d;
+    flex-direction: column;
+    }
+    
+    .sideBarMenu #publish-btn{
+        width: 140px;
+        margin: 10px;
+        background-color: #fff;
+        color: var(--main-color);
+        border-radius: 5px;
+    }
+    
+    nav a{
+        display:block;
+        padding: 15px;
+        text-decoration: none;
+        position: relative;
+        color: #fff;
+    }
+    
+    nav a:hover{
+        background-color: #1d5545;
+    }
+    
+    nav a>i{
+        margin-right: 15px;
+    }
+    
+    nav p{
+        background-color: #3b7555;
+        display:block;
+        padding: 12px;
+        margin-bottom: 0;
+        position: relative;
+        color: #fff;
+        padding: 12px 35px;
+        font-weight: bold;
+        /* text-align: center; */
+    }
+    
+    /* 未發佈按鈕置中 */
+    .sideBarMenu .dropdown {
+        text-align: center;
+    }
+    
+    .sideBarMenu a {
+        margin-left: 20px;
+    }
+    
+    nav .fa-cart-arrow-down {
+        margin-right: 16.75px;
+    }
+    
+    nav .fa-clipboard {
+        margin-left: 3px;
+        margin-right: 17.25px;
+    }
+    
+    nav .fa-location-dot {
+        margin-right: 18.5px;
+    }
 
-#release-btn{
-    width: 140px;
-    margin: 10px;
-    background-color: #fff;
-    border-radius: 5px;
-    color: var(--main-color);
-}
-
-.dropdown-menu.show{
-    padding-bottom: 10px;
-    padding-right: 10px;
-    width: 75%;
-}
-
-.dropdown-item:active {
-    background-color: #ffffff !important; 
-    color:var(--main-color);
-}
-
-.dropdown-item{    
-    box-sizing: border-box;
-}
-
-nav a{
-    display:block;
-    padding: 15px;
-    text-decoration: none;
-    position: relative;
-    color: #fff;
-}
-
-nav a:hover{
-    background-color: #1d5545;
-}
-
-nav a>i{
-    margin-right: 15px;
-}
-
-nav p{
-    background-color: #3b7555;
-    display:block;
-    padding: 12px;
-    margin-bottom: 0;
-    position: relative;
-    color: #fff;
-    text-align: center;
-}
-/* ----------side menu end----------- */
+    /* ----------side menu end----------- */
 
 /* ----main content---- */
 .main-content{
@@ -231,7 +241,7 @@ header h1{
     justify-content: space-between;
 }
 
-#send-email, #tagBtn{
+#send-email{
 background-color: var(--main-color);
 box-shadow: var(--second-color) 0 -1px 0 inset;
 height: 35px;
@@ -240,6 +250,7 @@ padding: 0 10px;
 font-size: 15px; 
 line-height: 35px;
 border-color: var(--main-color);
+border-radius: 5px;
 }
 
 /* tag area's dropdown & its list start */

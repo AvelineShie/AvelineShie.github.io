@@ -100,11 +100,27 @@ background-color: #518f6d;
 flex-direction: column;
 }
 
-.sideBarMenu .btn-secondary, .dropdown-menu{
+#release-btn{
     width: 140px;
     margin: 10px;
     background-color: #fff;
+    border-radius: 5px;
     color: var(--main-color);
+}
+
+.dropdown-menu.show{
+    padding-bottom: 10px;
+    padding-right: 10px;
+    width: 75%;
+}
+
+.dropdown-item:active {
+    background-color: #ffffff !important; 
+    color:var(--main-color);
+}
+
+.dropdown-item{    
+    box-sizing: border-box;
 }
 
 nav a{
@@ -226,13 +242,13 @@ line-height: 35px;
 border-color: var(--main-color);
 }
 
-/* dropdown & its list start */
+/* tag area's dropdown & its list start */
 
 .dropdown, #tagBtn{
     border-radius: 0 5px 5px 0;
 }
 
-.btn-outline-primary{
+.tag-area .btn-outline-primary{
     height: 35px;
     width: 75px;
     padding: 0 10px; 
@@ -244,7 +260,7 @@ border-color: var(--main-color);
 
 .btn-check:checked + .btn-outline-primary, 
 .btn-outline-primary:active, 
-.show > .btn-outline-primary.dropdown-toggle {
+.show >.btn-outline-primary.dropdown-toggle {
     color: #fff; 
     background-color: var(--main-color);
     border-color: var(--main-color); 

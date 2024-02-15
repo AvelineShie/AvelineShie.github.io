@@ -11,6 +11,10 @@
     .search-input{
         width: 100px;
     }
+
+    .table>*{
+        overflow-x: auto; 
+    }
 }
 
 
@@ -240,6 +244,7 @@ header h1{
     margin: 130px 0px 20px 0px;
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
 #send-email{

@@ -112,7 +112,7 @@
                                     <label class="btn btn-outline-primary" for="btnradio1">已付費</label>
                                     <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
                                     <label class="btn btn-outline-primary" for="btnradio2">待繳費</label>
-                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                                    
                                     <div class="dropdown">
                                         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         已取消
@@ -123,9 +123,11 @@
                                             <li><a class="dropdown-item" href="#">已取消，系統已退款</a></li>
                                         </ul>
                                     </div>
-                                    <label class="btn btn-outline-primary" for="btnradio3">全部</label>
+
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="btnradio3" id="all">全部</label>
                                     <div class="dropdown" >
-                                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="show-list">
                                         顯示欄位
                                         </a>
                                         <ul class="dropdown-menu">
@@ -203,7 +205,7 @@
                             <td>TWD$0</td>
                             <td>
                                 <button>訂單明細</button>
-                                <button>取消訂單</button>
+                                <button class="cancel-order">取消訂單</button>
                             </td>
                         </tr>
                         <tr>
@@ -218,7 +220,7 @@
                             <td>TWD$0</td>
                             <td>
                                 <button>訂單明細</button>
-                                <button>取消訂單</button>
+                                <button class="cancel-order">取消訂單</button>
                             </td>
                         </tr>
                         </tbody>

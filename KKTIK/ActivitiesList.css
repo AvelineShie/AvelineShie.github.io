@@ -66,7 +66,6 @@
     #header-nav .dropdown-item {
         width: 150px;
         color: #333;
-        background-color: red;
     }
 
 
@@ -99,15 +98,10 @@
     }
 
 
-    #user-name{
+    li #user-name{
         text-align: center;
     }
 
-    #user-account-wrap .dropdown-menu li:first-child a#user-name
-    {
-        width: 130px;
-        border-color: red;
-    }
      /* end ----- phone header-nav ----- */
         
     /* start ----- MOBILE-footer ----- */
@@ -160,89 +154,96 @@
         height: 24px;
         margin-bottom: 30px;
     }
-
-
     /* end ----- MOBILE-footer ----- */
 
 }
 
-/* PC nav start  */
-.width {
-    width: 95%;
-}
-
-#header-nav a {
-    padding: 13px 10px;
-}
+@media (min-width:769px) {
 
 
-#user-account i{
-    display: inline-block;
-    margin-right: 5px;
-}
+    @media (min-width:769px) and (max-width:1150px) {
+        .width {
+            width: 95%;
+        }
 
 
-#user-account span{
-    display: none;
-}
+        #header-nav a {
+            padding: 13px 10px;
+        }
 
 
+        #user-account i{
+            display: inline-block;
+            margin-right: 5px;
+        }
 
-@media (min-width:1151px) {
+
+        #user-account span{
+            display: none;
+        }
+    }
+
+
+    @media (min-width:1151px) {
+        .width {
+            width: 75%;
+        }
+
+
+        #header-nav a {
+            padding: 13px 20px;
+        }
+
+
+        #user-account i{
+            display: none;
+        }
+
+
+        #user-account span{
+            display: inline-block;
+        }
+    }
+
+
     .width {
-        width: 75%;
+        max-width: 1200px;
+        margin: 0px auto;
     }
 
 
-    #header-nav a {
-        padding: 13px 20px;
+    /* start ----- DESKTOP-header-nav ----- */
+
+
+    #header-nav-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
     }
 
 
-    #user-account i{
-        display: none;
+    #header-functions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        padding-left: 120px;
     }
 
 
-    #user-account span{
-        display: inline-block;
+    #header-functions-left,
+    #header-functions-right {
+        display: flex;
+        align-items: center;
     }
+
+    /* end ----- DESKTOP-header-nav ----- */
 }
 
 
-.width {
-    max-width: 1200px;
-    margin: 0px auto;
-}
-
-/* start ----- DESKTOP-header-nav ----- */
-
-#header-nav-wrap {
-display: flex;
-justify-content: space-between;
-align-items: center;
-position: relative;
-}
-
-
-#header-functions {
-display: flex;
-justify-content: space-between;
-align-items: center;
-position: absolute;
-width: 100%;
-padding-left: 120px;
-}
-
-
-#header-functions-left,
-#header-functions-right {
-display: flex;
-align-items: center;
-}
-/* end ----- DESKTOP-header-nav ----- */
-
-/* start -----通用 header-nav ----- */
+/* start ----- header-nav ----- */
 #header-nav {
     background-color: var(--main-color);
 }
@@ -332,12 +333,15 @@ h1 {
     margin: 0 auto 10px auto;
 }
 
-
-#user-name img{
-    text-align: center;
+#user-page{
+    width: ;
 }
 
-/* end ----- 通用 header-nav ----- */
+#user-name{
+    text-align: center;
+}
+/* end ----- header-nav ----- */
+
 
 :root {
     --main-color: #77A88D;
@@ -357,15 +361,8 @@ h1 {
     display: flex;
     /* max-width: 1200px; */
     width: 100%;
+    overflow-x: auto;
 }
-
-.ActivityContainer{
-    display: flex;
-    flex-direction: column;
-    margin-left: 180px;
-    margin-top: 30px;
-}
-
 /* ==============side menu start============== */
 .sideBarMenu{
 width: 200px;
@@ -373,7 +370,7 @@ background-color: #518f6d;
 flex-direction: column;
 }
 
-.sideBarMenu .btn-secondary, .dropdown-menu{
+.sideBarMenu .btn-secondary, .org-list{
     width: 140px;
     margin: 10px;
     background-color: #fff;
@@ -669,8 +666,6 @@ footer a {
 #footer-links ul {
     flex: 1;
 }
-
-
 
 #footer-end a {
     margin-left: 8px;

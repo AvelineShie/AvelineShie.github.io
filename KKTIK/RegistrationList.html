@@ -10,25 +10,57 @@
     <link rel="stylesheet" type="text/css" href="./RegistrationList.css">
 </head>
 <body>
-    <div class="wrap">
-        <!---------- nav start ------------>
-        <nav id="header-nav" class="d-flex">
-            <div class="width d-flex justify-content-between">
-                <div id="header-nav-left" class="d-flex align-items-center">
-                    <a href="" id="header-nav-logo"><img src="./imgs/nav_logo.png" alt=""></a>
+    <!-- logged-in-header-nav -->
+    <nav id="header-nav" class="d-flex logged-in-nav">
+        <input type="checkbox" id="nav-checkbox" class="d-none">
+        <div id="header-nav-wrap" class="width">
+            <div id="header-nav-logo-and-menu-button-wrap" class="d-flex align-items-center justify-content-between">
+                <h1><a href="" id="header-nav-logo"><img src="./imgs/nav_logo.png" alt=""></a></h1>
+                <label id="nav-checkbox-label" for="nav-checkbox"></label>
+            </div>
+            <div id="header-functions" class="">
+                <div id="header-functions-left" class="">
+                    <a href="">我的票券</a>
                     <a href="">探索活動</a>
                     <div id="header-nav-search-div" class="d-flex align-items-center">
                         <img src="./imgs/magnifier_icon.svg" alt="" id="header-nav-magnifier-icon">
                         <input type="text" id="header-nav-search-input" placeholder="搜尋活動">
                     </div>
                 </div>
-                <div id="header-nav-right" class="d-flex align-items-center">
-                    <a href="">註冊</a>
-                    <a href="">登入</a>
+                <div id="header-functions-right" class="">
+                    <a id="new-event" class="" href="#"><i class="fa-solid fa-circle-plus"></i>建立活動</a>
+                    <div id="org-select-wrap" class="d-block dropdown btn-group">
+                        <a id="org-select" class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">選擇組織</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <p>組織列表</p>
+                            <li><a href="" class="dropdown-item org">BS</a></li>
+                            <li><a href="" class="dropdown-item org">BS2</a></li>
+                            <li><a href="" class="dropdown-item org">
+                                <i class="fa-solid fa-circle-plus"></i>建立新組織</a></li>
+                        </ul>
+                    </div>
+                    <div id="user-account-wrap" class="d-block align-items-center dropdown btn-group">
+                        <a id="user-account" class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false"><i class="fa-solid fa-user"></i><span>彭德・佛傑</span></a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a id="user-name" class="dropdown-item d-inline-flex flex-column" href="#"><img
+                                        src="./imgs/magnifier_icon.svg" alt="user's photo">彭德・佛傑</a>
+                            </li>
+                            <li><a id="nav-user-setting" class="dropdown-item" href="#">
+                                <i class="fa-solid fa-gear"></i>設定</a></li>
+                            <li><a id="nav-user-orders" class="dropdown-item" href="#">
+                                <i class="fa-solid fa-ticket"></i>訂單</a></li>
+                            <li><a id="nav-logout" class="dropdown-item" href="#">
+                                <i class="fa-solid fa-right-from-bracket"></i>登出</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </nav>
-        <!---------- nav-end ---------------->
+        </div>
+    </nav>
+
+    <div class="wrap">
     
         <div class="container">
             <!------------ side menu start ------------>
@@ -86,6 +118,7 @@
                         <div class="tag-header">
                             <div class="btn-group">
                                 <button type="button" class="btn btn-primary" id="send-email"><i class="fa-solid fa-envelope"></i>寄信</button>
+                                <button type="button" class="btn btn-primary" id="tag"><i class="fa-solid fa-tags"></i>標籤</button>
                                 <!-- Modal -->
                                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
@@ -113,17 +146,6 @@
                                     <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
                                     <label class="btn btn-outline-primary" for="btnradio2">待繳費</label>
                                     
-                                    <div class="dropdown">
-                                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        已取消
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">所有已取消</a></li>
-                                            <li><a class="dropdown-item" href="#">已取消，系統未退款</a></li>
-                                            <li><a class="dropdown-item" href="#">已取消，系統已退款</a></li>
-                                        </ul>
-                                    </div>
-
                                     <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
                                     <label class="btn btn-outline-primary" for="btnradio3" id="all">全部</label>
                                     <div class="dropdown" >
@@ -138,7 +160,7 @@
                                                 </li>
                                             </div>
                                             <li><input type="checkbox" id="registration-id" name="registration-id" checked />
-                                                <label for="registration-id">訂單編號</label>
+                                                <label for="registration-id">報名序號</label>
                                             </li>
                                             <li><input type="checkbox" id="name" name="name" checked />
                                                 <label for="name">姓名</label>
@@ -147,22 +169,22 @@
                                                 <label for="email">Email</label>
                                             </li>
                                             <li><input type="checkbox" id="cell-phone" name="cell-phone" checked />
-                                                <label for="cell-phone">繳費方式</label>
+                                                <label for="cell-phone">手機</label>
                                             </li>
                                             <li><input type="checkbox" id="contact-name" name="contact-name" checked />
-                                                <label for="contact-name">票數</label>
+                                                <label for="contact-name">聯絡人姓名</label>
                                             </li>
                                             <li><input type="checkbox" id="contact-email" name="contact-email" checked />
-                                                <label for="contact-email">金額</label>
+                                                <label for="contact-email">聯絡人Email</label>
                                             </li>
                                             <li><input type="checkbox" id="ticket-type" name="ticket-type" checked />
-                                                <label for="ticket-type">郵資及其他費用</label>
+                                                <label for="ticket-type">票種</label>
                                             </li>
                                             <li><input type="checkbox" id="tag" name="tag" checked />
-                                                <label for="tag">手續費</label>
+                                                <label for="tag">標籤</label>
                                             </li>
                                             <div class="submit">
-                                                <input class="btn btn-primary" type="submit" value="套用">
+                                                <input class="btn btn-primary" type="submit" value="動作">
                                             </div>
                                         </ul>
                                     </div>
@@ -181,14 +203,14 @@
                         <thead>
                         <tr>
                             <th scope="col"><input type="checkbox"></th>
-                            <th scope="col">訂單編號</th>
+                            <th scope="col">報名序號</th>
                             <th scope="col">姓名</th>
                             <th scope="col">Email</th>
-                            <th scope="col">繳費方法</th>
-                            <th scope="col">票數</th>
-                            <th scope="col">金額</th>
-                            <th scope="col">郵資及其他費用</th>
-                            <th scope="col">手續費</th>
+                            <th scope="col">手機</th>
+                            <th scope="col">聯絡人姓名</th>
+                            <th scope="col">聯絡人Email</th>
+                            <th scope="col">票種</th>
+                            <th scope="col">標籤</th>
                             <th scope="col">動作</th>
                         </tr>
                         </thead>
@@ -198,14 +220,13 @@
                             <td>135506220</td>
                             <td>Mark</td>
                             <td>777666ABC@gmial.com</td>
-                            <td>1</td>
-                            <td>TWD$350</td>
-                            <td>TWD$0</td>
-                            <td>TWD$0</td>
-                            <td>TWD$0</td>
+                            <td>0988555666</td>
+                            <td>Mark阿嬤</td>
+                            <td>MarkGrandma@gmail.com</td>
+                            <td>一般票</td>
+                            <td></td>
                             <td>
-                                <button>訂單明細</button>
-                                <button class="cancel-order">取消訂單</button>
+                                <button>明細</button>
                             </td>
                         </tr>
                         <tr>
@@ -213,14 +234,13 @@
                             <td>135506228</td>
                             <td>Mary</td>
                             <td>888222ABC@gmial.com</td>
-                            <td>1</td>
-                            <td>TWD$3000</td>
-                            <td>TWD$0</td>
-                            <td>TWD$0</td>
-                            <td>TWD$0</td>
+                            <td>0977555444</td>
+                            <td>Maryㄟ阿拔</td>
+                            <td>MaryDad@gmail.com</td>
+                            <td>搖滾區</td>
+                            <td></td>
                             <td>
-                                <button>訂單明細</button>
-                                <button class="cancel-order">取消訂單</button>
+                                <button>明細</button>
                             </td>
                         </tr>
                         </tbody>
@@ -252,6 +272,62 @@
             
         </div>
     </div>
+
+    <!-- footer -->
+    <section id="footer-section">
+        <footer>
+            <div id="footer-links" class="width">
+                <ul>
+                    <p>參與活動</p>
+                    <li><a href="">常見問題</a></li>
+                    <li><a href="">購票流程說明</a></li>
+                    <li><a href="">探索所有活動</a></li>
+                    <li><a href="">下載 App</a></li>
+                </ul>
+                <ul>
+                    <p>舉辦活動</p>
+                    <li><a href="">主辦單位專區</a></li>
+                    <li><a href="">如何舉辦活動</a></li>
+                    <li><a href="">定價方式</a></li>
+                </ul>
+                <ul>
+                    <p>關於 KKTIX</p>
+                    <li><a href="">聯絡我們</a></li>
+                    <li><a href="">媒體素材</a></li>
+                    <li><a href="">加入 KKTIX</a></li>
+                    <li><a href="">隱私權政策</a></li>
+                    <li><a href="">服務條款</a></li>
+                </ul>
+                <ul id="footer-icon-ul">
+                    <p>追蹤 KKTIX</p>
+                    <li class="footer-icon-li d-flex flex-column">
+                        <a href="">台灣</a>
+                        <span><a href="" class="footer-icon-a"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="" class="footer-icon-a"><i class="fa-brands fa-instagram"></i></a></span>
+                    </li>
+                    <li class="footer-icon-li d-flex flex-column">
+                        <a href="">香港</a>
+                        <span><a href="" class="footer-icon-a"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="" class="footer-icon-a"><i class="fa-brands fa-instagram"></i></a></span>
+                    </li>
+                    <li><a href="">部落格</a></li>
+                </ul>
+            </div>
+            <div id="footer-end" class="width">
+                <div>
+                    <img id="footer-logo" src="./imgs/nav_logo.png" alt="">
+                    <span>OOXX娛樂股份有限公司</span>
+                    <span>OOXX ENTERTAINMENT LIMITED</span>
+                </div>
+                <div>
+                    <i class="fa-solid fa-earth-asia"></i>
+                    <a href="" class="footer-lang-active">繁體中文</a>
+                    <a href="">English</a>
+                    <a href="">日本語</a>
+                </div>
+            </div>
+        </footer>
+    </section>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>

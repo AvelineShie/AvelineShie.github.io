@@ -1,3 +1,12 @@
+:root {
+    --main-color: #3b7555;
+    --main-color-hover: #77A88D;
+    --second-color: #518f6d;
+    --click-color: #1d5545;
+    --main-font-size: 15px;
+    --common-border: 1px #ddd solid;
+}
+
 /* 組織名稱欄 */
 .header-title {
     display: flex;
@@ -21,8 +30,6 @@
     color: var(--main-color);
 }
 
-/* 頁籤 */
-
 
 /* 正式版面 */
 .wrap{
@@ -35,6 +42,8 @@
 .container{
     color: #333333;
     margin-top: 5px;
+    display: flex;
+    flex-direction: row;
 }
 
 /* 左半邊 */
@@ -44,7 +53,7 @@
 
 /* 麵包屑 */
 .breadcrumb {
-    background-color: #f5f5f5;
+    background-color: #edecec;
     padding: 8px 15px;
     border-radius: 4px;
     font-size: 15px;
@@ -74,6 +83,15 @@ span.note{
     color: #737373;
 }
 
+/* 所有必填欄位 */
+.essential-input::before{
+    content: "*";
+    display: inline-block;
+    color: #c07525;
+    margin-right: 5px;
+
+}
+
 /* 所有小區塊 */
 .log{
     display: block;
@@ -86,6 +104,10 @@ span.note{
     /* vertical-align: baseline; */
 }
 
+.OK{
+    color: var(--main-color-hover);
+    
+}
 .date-time{
     margin: 10px;
     line-height: 25px;

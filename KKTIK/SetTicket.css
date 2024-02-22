@@ -1,0 +1,57 @@
+/* 組織名稱欄 */
+.header-title {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px #ccc solid;
+    
+}
+
+.organize{
+    color: #999;
+    line-height: 37px;
+    font-size: 22px;
+    margin-right: 20px;
+    margin-left: 30px;
+}
+
+.name{
+    line-height: 37px;
+    font-size: 24px;
+    color: var(--main-color);
+}
+
+/* 頁籤 */
+
+
+/* 正式版面 */
+.wrap{
+    width: calc(100% - 200px);
+    /* display: flex;
+    flex-direction: column;
+    margin: 0 auto; */
+}
+
+.container{
+    color: #333333;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+/* 麵包屑 */
+.breadcrumb {
+    background-color: #f5f5f5;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.breadcrumb a{
+    display: inline-block;
+    padding: 0;
+    color: #333333;
+    margin-left: 15px;
+}

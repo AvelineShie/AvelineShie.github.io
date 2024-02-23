@@ -73,7 +73,16 @@ h4{
 }
 
 .contact-person, .applicants{
+    margin-bottom: 50px;
+}
+
+h3{
+    display: block;
+    padding: 10px;
+    background-color: #edecec;
     margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
 }
 
 .table-log{
@@ -81,7 +90,13 @@ h4{
     flex-direction: row;
 }
 
-/* .list-group:nth-child(){
-    display: block;
-    font-weight: bold;
-} */
+.list-group{
+    width: 50%;
+    border-radius: 0%;
+}
+
+.table{
+    margin-bottom: 0;
+    margin-left: 30px;
+    border: #ccc solid 1px;
+}

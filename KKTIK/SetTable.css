@@ -26,9 +26,6 @@
     color: var(--main-color);
 }
 
-/* 頁籤 */
-
-
 /* 正式版面 */
 .wrap{
     width: calc(100% - 200px);
@@ -39,5 +36,52 @@
 
 .container{
     color: #333333;
-    margin-top: 5px;
+    flex-direction: column;
+    margin-bottom: 90px;
 }
+
+/* 麵包屑 */
+.breadcrumb {
+    background-color: #edecec;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.breadcrumb a{
+    display: inline-block;
+    padding: 0;
+    color: #333333;
+    margin-left: 15px;
+}
+
+/* 正式頁面 */
+h4{
+    display: inline-block;
+    margin: 15px;
+    margin-bottom: 15px;
+    padding: 3px;
+    font-weight: bold;
+    border-bottom: #ccc solid 2px;
+}
+
+.data-log{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.contact-person, .applicants{
+    margin-bottom: 20px;
+}
+
+.table-log{
+    display: flex;
+    flex-direction: row;
+}
+
+/* .list-group:nth-child(){
+    display: block;
+    font-weight: bold;
+} */

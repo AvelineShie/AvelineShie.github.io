@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./reset.css">
     <link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet">
     <script src="https://kit.fontawesome.com/edf62d94b1.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="./ActivitiesList.css">
     <link rel="stylesheet" href="./Logged-in-nav.css">
     <link rel="stylesheet" href="./footer.css">
     <link rel="stylesheet" href="./SetTicket.css">
@@ -83,48 +82,53 @@
                 </nav>
             </div>
     
-            <table class="table">
-                <thead>
-                <tr>
-                    <th scope="col">票種名稱</th>
-                    <th scope="col">販售時間</th>
-                    <th scope="col">價格</th>
-                    <th scope="col">數量</th>
-                    <th scope="col"></th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>一般票</td>
-                    <td>2024/02/02 00:00 (+0800) ~ 2024/02/06 00:00 (+0800)</td>
-                    <td>TWD$350</td>
-                    <td>不限定數量</td>
-                    <td>
-                        <button>訂單明細</button>
-                        <button class="cancel-order">取消訂單</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="5"><span class="note">販售數量 1 ~ 1張。 販售單位 1張。</span></td>
-                </tr>
-                <tr>
-                    <td>搖滾區</td>
-                    <td>2024/02/05 00:00 (+0800) ~ 2024/02/07 00:00 (+0800)</td>
-                    <td>TWD$3000</td>
-                    <td>100</td>
-                    <td>
-                        <button>訂單明細</button>
-                        <button class="cancel-order">取消訂單</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="5"><span class="note">販售數量 1 ~ 1張。 販售單位 1張。</span></td>
-                </tr>
-                <tr>
-                    <td colspan="5"><button type="button" class="btn btn-outline-secondary">新增票種</button></td>
-                </tr>
-                </tbody>
-            </table>
+            <div class="table-log">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col" class="color-label"></th>
+                        <th scope="col">票種名稱</th>
+                        <th scope="col">販售時間</th>
+                        <th scope="col">價格</th>
+                        <th scope="col">數量</th>
+                        <th scope="col"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="color-label"></td>
+                        <td>一般票</td>
+                        <td>2024/02/02 00:00 (+0800) ~ 2024/02/06 00:00 (+0800)</td>
+                        <td>TWD$350</td>
+                        <td>不限定數量</td>
+                        <td>
+                            <button>編輯</button>
+                            <button class="delete">刪除</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="color-label"></td>
+                        <td colspan="5" id="sale-note"><span class="note">販售數量 1 ~ 1張。 販售單位 1張。</span></td>
+                    </tr>
+                    <tr>
+                        <td class="color-label"></td>
+                        <td>搖滾區</td>
+                        <td>2024/02/05 00:00 (+0800) ~ 2024/02/07 00:00 (+0800)</td>
+                        <td>TWD$3000</td>
+                        <td>100</td>
+                        <td>
+                            <button>編輯</button>
+                            <button class="delete">刪除</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="color-label"></td>
+                        <td colspan="5" id="sale-note"><span class="note">販售數量 1 ~ 1張。 販售單位 1張。</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <button type="button" class="btn btn-outline-secondary btn-sm" id="add-ticket">新增票種</button>
+            </div>
             <div class="pages-change">
                 <button type="button" class="btn btn-outline-secondary">上一頁</button>
                 <button type="button" class="btn btn-outline-secondary">下一頁</button>

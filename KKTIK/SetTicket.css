@@ -34,7 +34,6 @@
 /* 正式版面 */
 .wrap{
     width: calc(100% - 200px);
-
     display: flex;
     flex-direction: column;
     margin: 0 auto;

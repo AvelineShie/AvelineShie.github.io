@@ -37,6 +37,7 @@
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    margin-bottom: 90px;
 }
 
 .container{
@@ -152,7 +153,8 @@ span.note{
 .tag{
     display: inline-block;
     border-radius: 5px;
-    background-color: var(--light-green);
+    background-color: var(--second-color);
+    /* background-color: #64c025; */
     line-height: 20px;
     font-size: 15px;
     padding: 3px;
@@ -162,6 +164,6 @@ span.note{
 
 .tag:hover{
     box-shadow: 0 1px 1px rgba(0,0,0,0.06);
-    background-color: var(--main-color);
+    background-color: var(--main-color-hover);
     cursor: pointer;
 }

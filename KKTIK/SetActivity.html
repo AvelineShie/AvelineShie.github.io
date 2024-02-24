@@ -125,7 +125,7 @@
                     <input type="datetime-local" value="2024-02-21 7:30" class="date-time"> 至 <input type="datetime-local" value="2024-03-02 7:30" class="date-time">
                     <div>
                         <!-- 勾選後時間截止日與預計時間長度會隱藏 -->
-                        <div>
+                        <div class="end-time">
                             <input type="checkbox" name="checkbox" id="checkbox">
                             不提供結束時間
                         </div>
@@ -136,8 +136,8 @@
                 <!-- 活動人數 -->
                 <div class="log">
                     <h4>活動人數</h4>
-                    <input type="number" value="30" min="10" max="1000" step="10">
-                    <input type="checkbox" name="" id="">不限定數量
+                    <input type="number" value="30" min="10" max="1000" step="10" class="number-of-people">
+                    <input type="checkbox" name="" class="unlimited">不限定數量
                 </div>
 
                 <!-- 活動形式：線上則活動地址欄，實體則關線上選項欄 -->
@@ -362,5 +362,6 @@
 
         initMap();
     </script>
+    <script src="./SetActivity.js"></script>
 </body>
 </html>

@@ -10,15 +10,15 @@
 /* 組織名稱欄 */
 .header-title {
     display: flex;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     border-bottom: 1px #ccc solid;
     
 }
 
 .organize{
     color: #999;
-    line-height: 37px;
+    line-height: 40px;
     font-size: 22px;
     margin-right: 20px;
     margin-left: 30px;
@@ -26,7 +26,7 @@
 
 .name{
     line-height: 37px;
-    font-size: 24px;
+    font-size: 22px;
     color: var(--main-color);
 }
 
@@ -48,7 +48,7 @@
 /* 麵包屑 */
 .breadcrumb {
     background-color: #edecec;
-    padding: 8px 15px;
+    padding: 10px 8px;
     border-radius: 4px;
     font-size: 15px;
     line-height: 20px;
@@ -58,8 +58,14 @@
     display: inline-block;
     padding: 0;
     color: #333333;
-    margin-left: 15px;
+    margin-left: 10px;
 }
+
+
+.breadcrumb-item:nth-child(2) a {
+    color: var(--main-color-hover)
+}
+
 
 /* 表單 */
 th{
@@ -93,8 +99,8 @@ td>button{
 }
 
 td.color-label{
-    background-color: #2bb9d8;
-    border-bottom: #00aed6;
+    background-color: #3dbad6;
+    border-bottom: #3dbad6;
 }
 
 #add-ticket{

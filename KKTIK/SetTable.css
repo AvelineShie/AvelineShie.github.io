@@ -1,20 +1,15 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-
 /* 組織名稱欄 */
 .header-title {
     display: flex;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     border-bottom: 1px #ccc solid;
     
 }
 
 .organize{
     color: #999;
-    line-height: 37px;
+    line-height: 40px;
     font-size: 22px;
     margin-right: 20px;
     margin-left: 30px;
@@ -22,7 +17,7 @@
 
 .name{
     line-height: 37px;
-    font-size: 24px;
+    font-size: 22px;
     color: var(--main-color);
 }
 
@@ -56,7 +51,7 @@
     margin-left: 15px;
 }
 
-/* 正式頁面 */
+
 h4{
     display: inline-block;
     margin: 15px;
@@ -99,4 +94,63 @@ h3{
     margin-bottom: 0;
     margin-left: 30px;
     border: #ccc solid 1px;
+}
+
+/* 小標粗體 */
+thead>tr>th{
+    font-weight: bold;
+    border-bottom: #ccc solid 1px; ;
+}
+
+.table>tbody>tr>th{
+    background-color:#5ec4db;
+}
+
+td>.delete{
+    padding: 5px 10px;
+    font-size: 13px;
+    line-height: 1.5;
+    border-radius: 2px;
+    border: #ccc 1px solid;
+    box-shadow: #f2f2f2 0 -3px 0 inset;
+    background-color: #fff;
+}
+
+.delete:hover{
+    background-color: #f2f2f2;
+}
+
+.delete>i{
+    color: #b1564a;
+}
+
+li:first-child {
+    font-weight: bold;
+}
+
+td>span{
+    color: #737373;
+    margin-left: 15px;
+}
+
+.note, span.note>i{
+    color: var(--main-color);
+}
+
+.form-check-input[type=checkbox] {
+    border-radius: 0.25em ;
+    border: solid #b0b0b0 1px;
+}
+
+.form-check{
+	vertical-align: center;
+    height: 1.5em;
+    line-height: 1.5em;
+    margin: 5px;
+}
+
+.list-group-item:nth-child(n+2){
+    /* vertical-align: center; */
+    height: 2.5em;
+    line-height: 0.5em;
 }

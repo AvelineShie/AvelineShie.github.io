@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>活動主控台</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="./reset.css">
     <link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet">
     <script src="https://kit.fontawesome.com/edf62d94b1.js" crossorigin="anonymous"></script>
+    
     <link rel="stylesheet" type="text/css" href="./ActivitiesList.css">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="https://songwchen.github.io/web/ShowNest/shownest-header-nav-style.css">
+    <link rel="stylesheet" href="https://songwchen.github.io/web/ShowNest/shownest-footer-style.css">
+    <link rel="stylesheet" href="https://songwchen.github.io/web/ShowNest/shownest-general-environment-style.css">
+    
 </head>
 <body>
     <!-- logged-in-header-nav -->
@@ -16,24 +21,24 @@
         <input type="checkbox" id="nav-checkbox" class="d-none">
         <div id="header-nav-wrap" class="width">
             <div id="header-nav-logo-and-menu-button-wrap" class="d-flex align-items-center justify-content-between">
-                <h1><a href="" id="header-nav-logo"><img src="./imgs/nav_logo.png" alt=""></a></h1>
+                <h1><a href="https://songwchen.github.io/web/ShowNest/home.html" id="header-nav-logo"><img src="./imgs/shownest-logo.png" alt=""></a></h1>
                 <label id="nav-checkbox-label" for="nav-checkbox"></label>
             </div>
             <div id="header-functions" class="">
                 <div id="header-functions-left" class="">
                     <a href="">我的票券</a>
-                    <a href="">探索活動</a>
+                    <a href="https://songwchen.github.io/web/ShowNest/events.html">探索活動</a>
                     <div id="header-nav-search-div" class="d-flex align-items-center">
-                        <img src="./imgs/magnifier_icon.svg" alt="" id="header-nav-magnifier-icon">
+                        <i class="fa-solid fa-magnifying-glass" id="header-nav-magnifier-icon"></i>
                         <input type="text" id="header-nav-search-input" placeholder="搜尋活動">
                     </div>
                 </div>
                 <div id="header-functions-right" class="">
-                    <a id="new-event" class="" href="#"><i class="fa-solid fa-circle-plus"></i>建立活動</a>
+                    <a id="new-event" class="" href="https://avelineshie.github.io/KKTIK/CreateActivity.html"><i class="fa-solid fa-circle-plus"></i>建立活動</a>
                     <div id="org-select-wrap" class="d-block dropdown btn-group">
                         <a id="org-select" class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">選擇組織</a>
-                        <ul class="dropdown-menu dropdown-menu-end" id="org-list">
+                        <ul class="dropdown-menu dropdown-menu-end">
                             <p>組織列表</p>
                             <li><a href="" class="dropdown-item org">BS</a></li>
                             <li><a href="" class="dropdown-item org">BS2</a></li>
@@ -46,11 +51,11 @@
                             aria-expanded="false"><i class="fa-solid fa-user"></i><span>彭德・佛傑</span></a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><a id="user-name" class="dropdown-item d-inline-flex flex-column" href="#"><img
-                                        src="./imgs/icon-sample.jpg" alt="user's photo">彭德・佛傑</a>
+                                        src="https://picsum.photos/300/200/?random=10" alt="user's photo">彭德・佛傑</a>
                             </li>
-                            <li><a id="nav-user-setting" class="dropdown-item" href="#">
+                            <li><a id="nav-user-setting" class="dropdown-item" href="https://danichen12.github.io/00Project/edit/edit.html">
                                 <i class="fa-solid fa-gear"></i>設定</a></li>
-                            <li><a id="nav-user-orders" class="dropdown-item" href="#">
+                            <li><a id="nav-user-orders" class="dropdown-item" href="https://libclf.github.io/practice/account/orders.html">
                                 <i class="fa-solid fa-ticket"></i>訂單</a></li>
                             <li><a id="nav-logout" class="dropdown-item" href="#">
                                 <i class="fa-solid fa-right-from-bracket"></i>登出</a></li>
@@ -64,11 +69,12 @@
 <div class="wrap">
     <div class="container">
         <!------------ side menu start ------------>
+        <input type="checkbox" name="" id="sideMenu-active" />
         <div class="sideBarMenu">
             <nav>
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                        aria-expanded="false" id="publish-btn">
                         未發佈
                     </button>
                     <ul class="dropdown-menu">
@@ -92,6 +98,9 @@
                 <div><a href="#"><i class="fa-solid fa-circle-arrow-up fa-sm"></i>升級活動</a></div>
             </nav>
             </nav>
+            <!-- <label for="sideMenu-active">
+                <i class="fas fa-angle-right"></i>
+            </label> -->
         </div>
         <!--------- side menu end ------------>
 
@@ -107,20 +116,20 @@
             </header>
             <div class="subheader">
                 <div class="overview">
-                    <h2>綜覽</h2>
+                    <h2 class="title">綜覽</h2>
                 </div>
                 <div class="ticket-sales">
                     <div class="sales-data">
                         <span class="in-block">可售</span>
-                        <span class="number">50</span>
+                        <span class="block-number">50</span>
                     </div>
                     <div class="sales-data">
                         <span class="sold">已售</span>
-                        <span class="number">5</span>
+                        <span class="sold-number">5</span>
                     </div>
                     <div class="sales-data">
                         <span class="remain">剩餘</span>
-                    <span class="number">45</span>
+                    <span class="remain-number">45</span>
                     </div>
                 </div>
                 <img src="./imgs/pie-chart.png" alt="icon" class="pie-chart">
@@ -365,6 +374,8 @@
         </div>
     </div>
 
+
+
     <!-- footer -->
     <section id="footer-section">
         <footer>
@@ -383,17 +394,17 @@
                     <li><a href="">定價方式</a></li>
                 </ul>
                 <ul>
-                    <p>關於 KKTIX</p>
+                    <p>關於 SHOWNEST</p>
                     <li><a href="">聯絡我們</a></li>
                     <li><a href="">媒體素材</a></li>
-                    <li><a href="">加入 KKTIX</a></li>
+                    <li><a href="">加入 SHOWNEST</a></li>
                     <li><a href="">隱私權政策</a></li>
                     <li><a href="">服務條款</a></li>
                 </ul>
                 <ul id="footer-icon-ul">
-                    <p>追蹤 KKTIX</p>
+                    <p>追蹤 SHOWNEST</p>
                     <li class="footer-icon-li d-flex flex-column">
-                        <a href="">台灣</a>
+                        <span href="">台灣</span>
                         <span><a href="" class="footer-icon-a"><i class="fa-brands fa-facebook"></i></a>
                             <a href="" class="footer-icon-a"><i class="fa-brands fa-instagram"></i></a></span>
                     </li>
@@ -407,9 +418,9 @@
             </div>
             <div id="footer-end" class="width">
                 <div>
-                    <img id="footer-logo" src="./imgs/nav_logo.png" alt="">
-                    <span>OOXX娛樂股份有限公司</span>
-                    <span>OOXX ENTERTAINMENT LIMITED</span>
+                    <img id="footer-logo" src="./imgs/shownest-logo.png" alt="">
+                    <!-- <span>OOXX娛樂股份有限公司</span> -->
+                    <span>ShowNest Entertainment Limited</span>
                 </div>
                 <div>
                     <i class="fa-solid fa-earth-asia"></i>
@@ -420,9 +431,9 @@
             </div>
         </footer>
     </section>
-</div>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
 </body>
 </html>

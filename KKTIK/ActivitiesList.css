@@ -1,375 +1,72 @@
-/* start ----- phone header-nav ----- */
-@media screen and (max-width: 768px) {
-    /* 隱藏側邊欄 */
-    .sideBarMenu {
-        display: none;
-    }
-    .main-content {
-        margin-left: 0; 
-    }
-
-    #header-nav {
-        background-color: var(--main-color);
-    }
-
-
-    #header-nav a {
-        color: #fff;
-    }
-
-
-    #header-nav a:hover {
-        background-color: var(--main-color-hover);
-    }
-
-
-    h1 {
-        display: inline-block;
-        padding: 10px 0px;
-    }
-
-
-    #header-nav #header-nav-logo:hover {
-        background-color: transparent;
-    }
-
-
-    #header-nav img {
-        height: 20px;
-    }
-
-
-    #header-nav-search-div {
-        background-color: #fff;
-    }
-
-
-    #header-nav-magnifier-icon {
-        padding: 0px 5px 0px 10px;
-    }
-
-
-    #header-nav-search-input {
-        border: none;
-        width: 110px;
-        height: 40px;
-        transition: .3s ease;
-    }
-
-
-    #header-nav-search-input:focus {
-        outline: none;
-        width: 130px;
-    }
-
-
-    #header-nav .dropdown-item {
-        width: 150px;
-        color: #333;
-    }
-
-
-    #header-nav .dropdown-item:hover {
-        background-color: #ddd;
-    }
-
-
-    #header-functions-right i{
-        margin-right: 10px;
-    }
-
-
-    #header-nav-search-div {
-        margin-left: 10px;
-    }
-
-
-    #header-nav .dropdown-menu p{
-        padding: 13px 15px;
-        font-weight: 700;
-    }
-
-
-    #header-nav .dropdown-menu img{
-        height: 65px;
-        width: 65px;
-        border-radius: 50%;
-        margin: 0;
-    }
-
-
-    li #user-name{
-        text-align: center;
-    }
-
-     /* end ----- phone header-nav ----- */
-        
-    /* start ----- MOBILE-footer ----- */
-    #footer-links ul {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        border-bottom: var(--common-border);
-        padding-bottom: 30px;
-    }
-
-
-    #footer-links p {
-        grid-column: 1/-1;
-        margin-bottom: 10px;
-    }
-
-
-    #footer-links ul+ul {
-        margin-top: 40px;
-    }
-
-
-    #footer-end {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 60px;
-    }
-
-
-    #footer-end div:first-of-type {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-
-    #footer-end div:first-of-type span+span {
-        margin-top: 10px;
-    }
-
-
-    #footer-end>div+div {
-        margin-top: 30px;
-    }
-
-
-    #footer-logo {
-        height: 24px;
-        margin-bottom: 30px;
-    }
-    /* end ----- MOBILE-footer ----- */
-
-}
-
-@media (min-width:769px) {
-
-
-    @media (min-width:769px) and (max-width:1150px) {
-        .width {
-            width: 95%;
-        }
-
-
-        #header-nav a {
-            padding: 13px 10px;
-        }
-
-
-        #user-account i{
-            display: inline-block;
-            margin-right: 5px;
-        }
-
-
-        #user-account span{
-            display: none;
-        }
-    }
-
-
-    @media (min-width:1151px) {
-        .width {
-            width: 75%;
-        }
-
-
-        #header-nav a {
-            padding: 13px 20px;
-        }
-
-
-        #user-account i{
-            display: none;
-        }
-
-
-        #user-account span{
-            display: inline-block;
-        }
-    }
-
-
-    .width {
-        max-width: 1200px;
-        margin: 0px auto;
-    }
-
-
-    /* start ----- DESKTOP-header-nav ----- */
-
-    #header-nav-wrap {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-    }
-
-
-    #header-functions {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: absolute;
-        width: 100%;
-        padding-left: 120px;
-    }
-
-
-    #header-functions-left,
-    #header-functions-right {
-        display: flex;
-        align-items: center;
-    }
-
-    /* end ----- DESKTOP-header-nav ----- */
-}
-
-
-/* start ----- header-nav ----- */
-#header-nav {
-    background-color: var(--main-color);
-}
-
-
-#header-nav a {
-    color: #fff;
-}
-
-
-#header-nav a:hover {
-    background-color: var(--main-color-hover);
-}
-
-
-h1 {
-    display: inline-block;
-    padding: 10px 0px;
-}
-
-
-#header-nav #header-nav-logo:hover {
-    background-color: transparent;
-}
-
-
-#header-nav img {
-    height: 20px;
-}
-
-
-#header-nav-search-div {
-    background-color: #fff;
-}
-
-
-#header-nav-magnifier-icon {
-    padding: 0px 5px 0px 10px;
-}
-
-
-#header-nav-search-input {
-    border: none;
-    width: 110px;
-    height: 40px;
-    transition: .3s ease;
-}
-
-
-#header-nav-search-input:focus {
-    outline: none;
-    width: 130px;
-}
-
-
-#header-nav .dropdown-item {
-    width: 300px;
-    color: #333;
-}
-
-
-#header-nav .dropdown-item:hover {
-    background-color: #ddd;
-}
-
-
-#header-functions-right i{
-    margin-right: 10px;
-}
-
-
-#header-nav-search-div {
-    margin-left: 10px;
-}
-
-
-#header-nav .dropdown-menu p{
-    padding: 13px 15px;
-    font-weight: 700;
-}
-
-
-#header-nav .dropdown-menu img{
-    height: 65px;
-    width: 65px;
-    border-radius: 50%;
-    margin: 0 auto 10px auto;
-}
-
-#user-page{
-    width: ;
-}
-
-#user-name{
-    text-align: center;
-}
-/* end ----- header-nav ----- */
-
-
 :root {
-    --main-color: #77A88D;
+    --main-color: #3b7555;
     --main-color-hover: #77A88D;
     --second-color: #518f6d;
     --click-color: #1d5545;
-    --main-font-size: 15px;
-    --common-border: 1px #ddd solid;
 }
 
-*,.container{
-    margin: 0;
-    padding: 0;
+@media screen and (max-width: 768px) {
+    /* side menu start */
+    .sideBarMenu {
+        position: relative;
+    }
+    .main-content {
+        margin-left: -200px;
+    }
+
+    /* label {
+        width: 50px;
+        height: 60px;
+        background-color: #d1d1d1;
+        color: #a1a1a1;
+        position: absolute; 
+        right: -20px;
+        top: 0; 
+        bottom: 0; 
+        margin: auto;
+        line-height: 80px;
+        border-radius: 0 3px 3px 0;
+        box-shadow: 3px 0 3px rgba(23, 23, 54, 0.6);
+    } */
+
+    #sideMenu-active:checked + .sideBarMenu {
+        transform: translateX(0);
+        label .fas {
+        transform: scaleX(-1);
+        }
+    
+    #sideMenu-active {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;}
+    
+    }
+
+.sideBarMenu{
+    position: relative;
+    transform: translateX(-100%);
+    transition: 0.5s;
+    }
+
 }
+
+/* RWD end */
 
 .container{
     display: flex;
-    /* max-width: 1200px; */
-    width: 100%;
-    overflow-x: auto;
+    max-width: 1200px;
+    padding: 0;
+    margin: 0;
 }
 /* ==============side menu start============== */
 .sideBarMenu{
 width: 200px;
 background-color: #518f6d;
 flex-direction: column;
+padding-bottom: 30px;
 }
 
-.sideBarMenu .btn-secondary, .org-list{
+.sideBarMenu #publish-btn{
     width: 140px;
     margin: 10px;
     background-color: #fff;
@@ -401,7 +98,6 @@ nav p{
     color: #fff;
     padding: 12px 35px;
     font-weight: bold;
-    /* text-align: center; */
 }
 
 /* 未發佈按鈕置中 */
@@ -424,6 +120,10 @@ nav .fa-clipboard {
 
 nav .fa-location-dot {
     margin-right: 18.5px;
+}
+
+#sideMenu-active{
+    display: none;
 }
 
 /* ----------side menu end----------- */
@@ -470,6 +170,7 @@ header, .date-Place, .tickets-sales-status, .sales-method-statistics, .amount-st
     justify-content: center; 
     align-items: center; 
     text-decoration: none;
+    margin-left: 19px;
 }
 /* ----------header end---------- */
 
@@ -491,9 +192,11 @@ header, .date-Place, .tickets-sales-status, .sales-method-statistics, .amount-st
     flex-grow: 1; /* 讓 h2 元素能夠佔據剩餘的空間 */
 }
 
-.subheader h2{
+.subheader .overview h2{
     color: #333;
     font-size: 26px;
+    text-align: start;
+    font-weight: 400;
 }
 
 .subheader .pie-chart{
@@ -519,13 +222,42 @@ header, .date-Place, .tickets-sales-status, .sales-method-statistics, .amount-st
     letter-spacing: 0.94px;
     margin-bottom: -2px;};
 
-
-    .number{
-    font-size: 23px;
-    color: red;
+    span .block-number{
+    font-size: 22px;
+    color: #a1a1a1;
     font-family: 'Times New Roman';
     font-weight: bold;
+    display: block;
+    margin-top: 4px;
     }
+
+    .sold-number{
+    font-size: 22px;
+    color: var(--second-color);
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    display: block;
+    margin-top: 4px;
+    }
+
+    .remain-number{
+    font-size: 22px;
+    color: #a1a1a1;
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    display: block;
+    margin-top: 4px;
+    }
+
+    .block-number{
+    font-size: 22px;
+    color: var(--main-color-hover);
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    display: block;
+    margin-top: 4px;
+    }
+    
 
 /* ----------.subheader end ----------*/
 
@@ -573,9 +305,10 @@ table>tbody>tr>td, table>tfoot>tr>td{
 
 .tickets-sales-status>h3, .sales-method-statistics>h3, .amount-statistics>.amount-statistics-head>h3, .current-order>h3{
     font-size: 24px;
+    font-weight: 400;
     display: inline-block;
     border-bottom: 1px solid #999; 
-    color: initial; /* 保持文字顏色 */
+    color: #333;
     margin: 15px 0px;
 }
 

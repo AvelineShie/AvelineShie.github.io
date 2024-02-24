@@ -16,256 +16,8 @@
         width: 90%;
         margin: 0px auto;
     }
-
-
-    /* start ----- MOBILE-header-nav ----- */
-
-
-    #header-functions-right li a {
-        padding: 13px 20px;
-    }
-
-
-    #header-nav-logo-and-menu-button-wrap {
-        margin: 15px 0px 10px;
-    }
-
-
-    #header-functions {
-        display: none;
-        padding: 5px 0px 10px;
-    }
-
-
-    #header-functions a {
-        display: block;
-        padding: 15px 0px;
-    }
-
-
-    #header-nav-search-div {
-        margin: 15px 0px;
-    }
-
-
-    #nav-checkbox:checked~div #header-functions {
-        display: block;
-    }
-
-
-    #nav-checkbox-label {
-        display: inline-block;
-        width: 30px;
-        height: 30px;
-        background-color: var(--main-color);
-        border: #fff 1px solid;
-        border-radius: 5px;
-        margin-bottom: 5px;
-        /* for ::after */
-        position: relative;
-    }
-
-
-    #nav-checkbox-label::after {
-        content: '';
-        display: inline-block;
-        position: absolute;
-        inset: 0;
-        margin: auto;
-        width: 80%;
-        height: 2px;
-        background-color: #fff;
-        border-radius: 1px;
-        box-shadow: 0px 6px 0 0 #fff, 0px -6px 0 0 #fff;
-    }
-
-
-    /* end ----- MOBILE-header-nav ----- */
 }
 
-@media (min-width:769px) {
-
-
-    @media (min-width:769px) and (max-width:1150px) {
-        .width {
-            width: 95%;
-        }
-
-
-        #header-nav a {
-            padding: 13px 10px;
-        }
-
-
-        #user-account i{
-            display: inline-block;
-            margin-right: 5px;
-        }
-
-
-        #user-account span{
-            display: none;
-        }
-    }
-
-
-    @media (min-width:1151px) {
-        .width {
-            width: 75%;
-        }
-
-
-        #header-nav a {
-            padding: 13px 20px;
-        }
-
-
-        #user-account i{
-            display: none;
-        }
-
-
-        #user-account span{
-            display: inline-block;
-        }
-    }
-
-
-    .width {
-        max-width: 1200px;
-        margin: 0px auto;
-    }
-
-
-    /* start ----- DESKTOP-header-nav ----- */
-
-
-    #header-nav-wrap {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-    }
-
-
-    #header-functions {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: absolute;
-        width: 100%;
-        padding-left: 120px;
-    }
-
-
-    #header-functions-left,
-    #header-functions-right {
-        display: flex;
-        align-items: center;
-    }
-
-
-    /* end ----- DESKTOP-header-nav ----- */
-}
-
-/* start ----- header-nav ----- */
-
-
-#header-nav {
-    background-color: var(--main-color);
-}
-
-
-#header-nav a {
-    color: #fff;
-}
-
-
-#header-nav a:hover {
-    background-color: var(--main-color-hover);
-}
-
-
-h1 {
-    display: inline-block;
-    padding: 10px 0px;
-}
-
-
-#header-nav #header-nav-logo:hover {
-    background-color: transparent;
-}
-
-
-#header-nav img {
-    height: 20px;
-}
-
-
-#header-nav-search-div {
-    background-color: #fff;
-}
-
-
-#header-nav-magnifier-icon {
-    padding: 0px 5px 0px 10px;
-}
-
-
-#header-nav-search-input {
-    border: none;
-    width: 110px;
-    height: 40px;
-    transition: .3s ease;
-}
-
-
-#header-nav-search-input:focus {
-    outline: none;
-    width: 130px;
-}
-
-
-#header-nav .dropdown-item {
-    width: 300px;
-    color: #333;
-}
-
-
-#header-nav .dropdown-item:hover {
-    background-color: #ddd;
-}
-
-
-#header-functions-right i{
-    margin-right: 10px;
-}
-
-
-#header-nav-search-div {
-    margin-left: 10px;
-}
-
-
-#header-nav .dropdown-menu p{
-    padding: 13px 15px;
-    font-weight: 700;
-}
-
-
-#header-nav .dropdown-menu img{
-    height: 65px;
-    width: 65px;
-    border-radius: 50%;
-    margin: 0 auto 10px auto;
-}
-
-
-#user-name{
-    text-align: center;
-}
-
-/* end ----- header-nav ----- */
 
 :root {
     --main-color: #77A88D;
@@ -276,74 +28,11 @@ h1 {
     --common-border: 1px #ddd solid;
 }
 
-*, .container{
+.container{
     margin: 0;
     padding: 0;
-}
-
-.container {
-    max-width: 100%;
-}
-
-
-.ActivityContainer{
     display: flex;
-    flex-direction: column;
-    margin-left: 180px;
-    margin-top: 30px;
-}
-
-/* start ----- header-nav ----- */
-#header-nav {
-    background-color: var(--main-color);
-}
-
-#header-nav a {
-    color: #fff;
-    padding: 13px 20px;
-}
-
-#header-nav a:hover {
-    background-color: var(--main-color-hover);
-}
-
-#header-nav #header-nav-logo {
-    padding: 0px 20px;
-}
-
-#header-nav #header-nav-logo:hover {
-    background-color: transparent;
-}
-
-#header-nav img {
-    height: 20px;
-}
-
-#header-nav-search-div {
-    background-color: #fff;
-}
-
-#header-nav-magnifier-icon {
-    padding: 0px 5px 0px 10px;
-}
-
-#header-nav-search-input {
-    border: none;
-    width: 200px;
-    height: 40px;
-    transition: .3s ease;
-}
-
-#header-nav-search-input:focus {
-    outline: none;
-    width: 220px;
-}
-
-/* =============nav end ================== */
-
-.container{
-display: flex;
-max-width: 100%;
+    max-width: 100%;
 }
 
 /* ==============side menu start============== */
@@ -351,6 +40,7 @@ max-width: 100%;
     width: 200px;
     background-color: #518f6d;
     flex-direction: column;
+    padding-bottom: 30px;
     }
     
     .sideBarMenu #publish-btn{
@@ -386,7 +76,6 @@ max-width: 100%;
         color: #fff;
         padding: 12px 35px;
         font-weight: bold;
-        /* text-align: center; */
     }
     
     /* 未發佈按鈕置中 */
@@ -396,7 +85,6 @@ max-width: 100%;
     
     .sideBarMenu a {
         padding-left: 20px;
-        padding-bottom: 10px;
     }
     
     nav .fa-cart-arrow-down {
@@ -412,13 +100,16 @@ max-width: 100%;
         margin-right: 18.5px;
     }
 
+    #sideMenu-active{
+        display: none;
+    }
+
     /* ----------side menu end----------- */
 
 /* ----main content---- */
 .main-content{
     color: #333333;
     width: 100%;
-    
 }
 
 /* ----------header start--------- */
@@ -455,6 +146,7 @@ header h1{
     justify-content: center; 
     align-items: center; 
     text-decoration: none;
+    margin-left: 19px;
 }
 /* ----------header end---------- */
 
@@ -472,9 +164,11 @@ header h1{
     width: 100%;
 }
 
-.subheader h2{
+.subtitle{
     color: #333;
     font-size: 26px;
+    text-align: left;
+    font-weight: 400;
 }
 
 .subheader .overview {
@@ -499,8 +193,6 @@ header h1{
 #send-email, #tag{
 background-color: var(--main-color);
 box-shadow: var(--second-color) 0 -1px 0 inset;
-height: 35px;
-width: 75px;
 padding: 0 10px; 
 font-size: 15px; 
 line-height: 35px;
@@ -544,16 +236,23 @@ border-color: var(--main-color);
 }
 
 .btn-outline-primary:hover {
-    color: var(--main-color)!important; /* 懸停的文字色 */
+    --bs-btn-color: #fff; 
     border-color: var(--main-color)!important;
 }
 
-.dropdown .dropdown-toggle{
+#show-list{
     border-radius: 0;
-    /* tag 這排的下拉選單 */
     background-color: #fff;
     color: var(--main-color);
     height: 35px;
+}
+
+.btn-secondary{
+    --bs-btn-bg: var(--main-color);
+    --bs-btn-border-color: var(--main-color);
+    --bs-btn-hover-bg: var(--main-color-hover);
+    --bs-btn-active-bg:var(--main-color);
+    --bs-btn-active-border-color:var(--main-color);
 }
 
 #all:hover{
@@ -584,7 +283,6 @@ border-color: var(--main-color);
     font-size: 14px;
     padding: 0 0 5px 0;
     margin: 5px;
-    
 }
 
 .search-input{

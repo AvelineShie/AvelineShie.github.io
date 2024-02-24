@@ -1,3 +1,12 @@
+:root {
+    --main-color: #3b7555;
+    --main-color-hover: #77A88D;
+    --second-color: #518f6d;
+    --click-color: #1d5545;
+    --main-font-size: 15px;
+    --common-border: 1px #ddd solid;
+}
+
 /* 組織名稱欄 */
 .header-title {
     display: flex;
@@ -133,7 +142,8 @@ td>span{
     margin-left: 15px;
 }
 
-.note, span.note>i{
+
+.note{
     color: var(--main-color);
 }
 
@@ -152,5 +162,5 @@ td>span{
 .list-group-item:nth-child(n+2){
     /* vertical-align: center; */
     height: 2.5em;
-    line-height: 0.5em;
+    line-height: 23px;
 }

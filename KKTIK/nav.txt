@@ -1,0 +1,65 @@
+/* start ----- header-nav ----- */
+
+#header-nav {
+    background-color: var(--main-color);
+}
+
+#header-nav a {
+    color: #fff;
+    padding: 13px 20px;
+}
+
+#header-nav a:hover {
+    background-color: var(--main-color-hover);
+}
+
+#header-nav #header-nav-logo {
+    padding: 0px 20px;
+}
+
+#header-nav #header-nav-logo:hover {
+    background-color: transparent;
+}
+
+#header-nav img {
+    height: 20px;
+}
+
+#header-nav-search-div {
+    background-color: #fff;
+}
+
+#header-nav-magnifier-icon {
+    padding: 0px 5px 0px 10px;
+}
+
+#header-nav-search-input {
+    border: none;
+    width: 200px;
+    height: 40px;
+    transition: .3s ease;
+}
+
+#header-nav-search-input:focus {
+    outline: none;
+    width: 220px;
+}
+
+/* end ----- header-nav ----- */
+
+<nav id="header-nav" class="d-flex">
+        <div class="width d-flex justify-content-between">
+            <div id="header-nav-left" class="d-flex align-items-center">
+                <a href="" id="header-nav-logo"><img src="./imgs/nav_logo.png" alt=""></a>
+                <a href="">探索活動</a>
+                <div id="header-nav-search-div" class="d-flex align-items-center">
+                    <img src="./imgs/magnifier_icon.svg" alt="" id="header-nav-magnifier-icon">
+                    <input type="text" id="header-nav-search-input" placeholder="搜尋活動">
+                </div>
+            </div>
+            <div id="header-nav-right" class="d-flex align-items-center">
+                <a href="">註冊</a>
+                <a href="">登入</a>
+            </div>
+        </div>
+    </nav>								"				

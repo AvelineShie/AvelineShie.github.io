@@ -146,7 +146,6 @@ span.note{
     }
 
 .ck-editor__editable_inline {
-    /* 設定最低高度 */
     min-height: 300px;
 }
 

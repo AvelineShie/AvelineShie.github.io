@@ -14,15 +14,20 @@ establishBtn.style.display = "none";
     
 
 organizeList.addEventListener("change", function() {
-    if(organizeList.value !== 'option1'){
+    if(organizeList.value == 'option1'){
+         // location.reload(); 
+        activitySelect.style.display = "none";
+        newActivity.style.display = "none";
+        TOSzone.style.display = "none";
+        establishBtn.style.display = "none";
+    }
+    else{
+    
         activitySelect.style.display = "block";
         newActivity.style.display = "block";
         TOSzone.style.display = "block";
         establishBtn.style.display = "block";
         newActivityRadio.checked = true;
-    }
-    else{
-        location.reload(); //略蠢,再想想
     }
 });
 

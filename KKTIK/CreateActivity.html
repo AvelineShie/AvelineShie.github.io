@@ -2,74 +2,169 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Create Activities</title>
+    <title>建立活動</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
     <link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet">
     <script src="https://kit.fontawesome.com/edf62d94b1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="./CreateActivity.css">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="https://songwchen.github.io/web/ShowNest/shownest-header-nav-style.css">
+    <link rel="stylesheet" href="https://songwchen.github.io/web/ShowNest/shownest-footer-style.css">
+    <link rel="stylesheet" href="https://songwchen.github.io/web/ShowNest/shownest-general-environment-style.css">
+
 </head>
 <body>
-<div class="wrap">
-        <!-- header-nav -->
-        <nav id="header-nav" class="d-flex">
-            <div class="width d-flex justify-content-between">
-                <div id="header-nav-left" class="d-flex align-items-center">
-                    <a href="" id="header-nav-logo">
-                        <img src="./imgs/nav_logo.png" alt="">
-                    </a>
-                    <a href="">我的票卷</a>
-                    <a href="">探索活動</a>
-                    <div id="header-nav-search-div" class="d-flex align-items-center">
-                        <img src="./imgs/magnifier_icon.svg" alt="" id="header-nav-magnifier-icon">
-                        <input type="text" id="header-nav-search-input" placeholder="搜尋活動">
-                    </div>
+<!-- logged-in-header-nav -->
+<nav id="header-nav" class="d-flex logged-in-nav">
+    <input type="checkbox" id="nav-checkbox" class="d-none">
+    <div id="header-nav-wrap" class="width">
+        <div id="header-nav-logo-and-menu-button-wrap" class="d-flex align-items-center justify-content-between">
+            <h1><a href="https://songwchen.github.io/web/ShowNest/home.html" id="header-nav-logo"><img src="./imgs/shownest-logo.png" alt=""></a></h1>
+            <label id="nav-checkbox-label" for="nav-checkbox"></label>
+        </div>
+        <div id="header-functions" class="">
+            <div id="header-functions-left" class="">
+                <a href="">我的票券</a>
+                <a href="https://songwchen.github.io/web/ShowNest/events.html">探索活動</a>
+                <div id="header-nav-search-div" class="d-flex align-items-center">
+                    <i class="fa-solid fa-magnifying-glass" id="header-nav-magnifier-icon"></i>
+                    <input type="text" id="header-nav-search-input" placeholder="搜尋活動">
                 </div>
             </div>
-        </nav>
-        <!-- nav-end -->
-    
-        <div class="container">
-            <!-- 從首頁導覽列進入的建立活動 -->
-            <div class="empty">
-            <!-- 留白:從組織進去會多出一排組織名稱 -->
-            </div>
-            <div class="ActivityContainer">
-                <h1>建立活動</h1>
-                <h2>選擇活動舉辦單位</h2>
-                <p>您尚未選擇組織，請選取此活動所屬之組織：</p>
-                <select name="所屬組織" id="organizeList">
-                    <option value="option1"></option>
-                    <option>Mafia</option>
-                    <option>Freemasonry</option>
-                </select>
-                <!-- Hide the organizations while not selected below -->
-                <div class="new-activity">
-                    <input type="radio"  class="new-activiy-radio">
-                    <label> 全新的活動</label>
+            <div id="header-functions-right" class="">
+                <a id="new-event" class="" href="https://avelineshie.github.io/KKTIK/CreateActivity.html"><i class="fa-solid fa-circle-plus"></i>建立活動</a>
+                <div id="org-select-wrap" class="d-block dropdown btn-group">
+                    <a id="org-select" class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">選擇組織</a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <p>組織列表</p>
+                        <li><a href="" class="dropdown-item org">BS</a></li>
+                        <li><a href="" class="dropdown-item org">BS2</a></li>
+                        <li><a href="" class="dropdown-item org">
+                            <i class="fa-solid fa-circle-plus"></i>建立新組織</a></li>
+                    </ul>
                 </div>
-                <div class="activity-select">
-                    <p class="notice">您也可以直接套用既有的活動設定（基本資料、表單、票種），節省您寶貴的時間</p>
-                    <h3 class="lined">以最近舉辦的活動做為樣板</h3>
-                    <!-- Show activity items when the activities exist-->
-                    <div class="activity-item">
-                        <!-- Display blank when no activities exist -->
-                        <p>尚無活動可做樣板</p>
-                        <label><input type="radio" id="ActivityItem"> 深夜九點半搶銀行(暫)</label>
-                    </div>
+                <div id="user-account-wrap" class="d-block align-items-center dropdown btn-group">
+                    <a id="user-account" class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false"><i class="fa-solid fa-user"></i><span>彭德・佛傑</span></a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a id="user-name" class="dropdown-item d-inline-flex flex-column" href="#"><img
+                                    src="https://picsum.photos/300/200/?random=10" alt="user's photo">彭德・佛傑</a>
+                        </li>
+                        <li><a id="nav-user-setting" class="dropdown-item" href="https://danichen12.github.io/00Project/edit/edit.html">
+                            <i class="fa-solid fa-gear"></i>設定</a></li>
+                        <li><a id="nav-user-orders" class="dropdown-item" href="https://libclf.github.io/practice/account/orders.html">
+                            <i class="fa-solid fa-ticket"></i>訂單</a></li>
+                        <li><a id="nav-logout" class="dropdown-item" href="#">
+                            <i class="fa-solid fa-right-from-bracket"></i>登出</a></li>
+                    </ul>
                 </div>
-                <div class="TOSzone">
-                    <label for="">
-                        <input type="checkbox" class="checkbox"> 我已經閱讀並同意 
-                        <a href="">主辦單位服務條款</a> 與 <a href="">隱私權政策</a>
-                    </label>
-                </div>
-                <input class="establishBtn" type="button" value="建立"/>
             </div>
         </div>
+    </div>
+</nav>
+
+<div class="wrap">
+    <div class="container">
+        <!-- 從首頁導覽列進入的建立活動 -->
+        <div class="empty">
+        <!-- 留白:從組織進去會多出一排組織名稱 -->
+        </div>
+        <div class="ActivityContainer">
+            <h1>建立活動</h1>
+            <h2 class="select-organizer">選擇活動舉辦單位</h2>
+            <p>您尚未選擇組織，請選取此活動所屬之組織：</p>
+            <select name="所屬組織" id="organizeList">
+                <option value="option1"></option>
+                <option>Mafia</option>
+                <option>Freemasonry</option>
+            </select>
+            <!-- Hide the organizations while not selected below -->
+            <div class="new-activity">
+                <input type="radio"  class="new-activiy-radio">
+                <label> 全新的活動</label>
+            </div>
+            <div class="activity-select">
+                <p class="notice">您也可以直接套用既有的活動設定（基本資料、表單、票種），節省您寶貴的時間</p>
+                <h3 class="lined">以最近舉辦的活動做為樣板</h3>
+                <!-- Show activity items when the activities exist-->
+                <div class="activity-item">
+                    <!-- Display blank when no activities exist -->
+                    <!-- <p>尚無活動可做樣板</p> -->
+                    <label><input type="radio" id="ActivityItem"> 深夜九點半搶銀行(暫)</label>
+                </div>
+            </div>
+            <div class="TOSzone">
+                <label for="">
+                    <input type="checkbox" class="checkbox"> 我已經閱讀並同意 
+                    <a href="">主辦單位服務條款</a> 與 <a href="">隱私權政策</a>
+                </label>
+            </div>
+            <input class="establishBtn" type="button" value="建立"/>
+        </div>
+    </div>
 </div>
+
+<!-- footer -->
+<section id="footer-section">
+    <footer>
+        <div id="footer-links" class="width">
+            <ul>
+                <p>參與活動</p>
+                <li><a href="">常見問題</a></li>
+                <li><a href="">購票流程說明</a></li>
+                <li><a href="">探索所有活動</a></li>
+                <li><a href="">下載 App</a></li>
+            </ul>
+            <ul>
+                <p>舉辦活動</p>
+                <li><a href="">主辦單位專區</a></li>
+                <li><a href="">如何舉辦活動</a></li>
+                <li><a href="">定價方式</a></li>
+            </ul>
+            <ul>
+                <p>關於 KKTIX</p>
+                <li><a href="">聯絡我們</a></li>
+                <li><a href="">媒體素材</a></li>
+                <li><a href="">加入 KKTIX</a></li>
+                <li><a href="">隱私權政策</a></li>
+                <li><a href="">服務條款</a></li>
+            </ul>
+            <ul id="footer-icon-ul">
+                <p>追蹤 KKTIX</p>
+                <li class="footer-icon-li d-flex flex-column">
+                    <span href="">台灣</span>
+                    <span><a href="" class="footer-icon-a"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="" class="footer-icon-a"><i class="fa-brands fa-instagram"></i></a></span>
+                </li>
+                <li class="footer-icon-li d-flex flex-column">
+                    <a href="">香港</a>
+                    <span><a href="" class="footer-icon-a"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="" class="footer-icon-a"><i class="fa-brands fa-instagram"></i></a></span>
+                </li>
+                <li><a href="">部落格</a></li>
+            </ul>
+        </div>
+        <div id="footer-end" class="width">
+            <div>
+                <img id="footer-logo" src="./imgs/shownest-logo.png" alt="">
+                <!-- <span>OOXX娛樂股份有限公司</span> -->
+                <span>ShowNest Entertainment Limited</span>
+            </div>
+            <div>
+                <i class="fa-solid fa-earth-asia"></i>
+                <a href="" class="footer-lang-active">繁體中文</a>
+                <a href="">English</a>
+                <a href="">日本語</a>
+            </div>
+        </div>
+    </footer>
+</section>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <script src="./CreateActivity.js"></script>
+
 </body>
 </html>

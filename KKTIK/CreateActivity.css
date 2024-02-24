@@ -1,5 +1,17 @@
+@media screen and (min-width: 768px) {
+    .wrap{ 
+        min-width: 768px; 
+        max-width: 1280px;
+    };
+
+    .width {
+        width: 90%;
+    }
+
+}
+
 :root {
-    --main-color: #77A88D;
+    --main-color: #3b7555;
     --main-color-hover: #77A88D;
     --second-color: #518f6d;
     --click-color: #1d5545;
@@ -7,96 +19,17 @@
     --common-border: 1px #ddd solid;
 }
 
-@media screen and (min-width: 768px) {
-    .wrap{ 
-        /* min-width: 960px;  */
-        min-width: 768px; 
-        max-width: 1280px;
-        margin: 0 auto; 
-    };
-}
-
 *{
     margin: 0; 
     padding:0;
 }
 
-/* nav start======> */
-#header-nav {
-    background-color: var(--main-color);
-    width: 100%;
-}
-
-.d-flex {
-display: flex;
-}
-
-#header-nav a {
-    color: #fff;
-    padding: 13px 20px;
-}
-
-#header-nav a:hover {
-    background-color: var(--main-color);
-}
-
-#header-nav #header-nav-logo {
-    padding-top: 15x;
-    padding-left: 20px;
-}
-
-#header-nav img {
-    height: 20px;
-}
-
-a {
-    display: inline-block;
-    text-decoration: none;
-}
-
-#header-nav-search-div {
-    height: 40px;
-    background-color: #fff;
-}
-
-#header-nav-search-div img{
-    display: flex;
-    justify-content: center;
-}
-
-#header-nav-magnifier-icon {
-    padding: 0px 5px 0px 10px;
-}
-
-#header-nav-search-input {
-    border: none;
-    outline: none;
-    box-shadow:0 0px 0px;
-    width: 200px;
-    height: 40px;
-    font-size: inherit;
-}
-
-.fa-caret-down{
-    margin-left: 10px;
-}
-
-.fa-circle-plus{
-    margin-right: 5px;
-    background-color: #fff;
-    color: var(--main-color);
-    border-radius: 50%;
-    font-family: Font Awesome 5 Pro;
-}
-/* =============nav end ================== */
-
 /* Activity Container */
 .ActivityContainer{
     display: flex;
     flex-direction: column;
-    /* margin-left: 110px; */
-    /* margin-top: 20px; */
-    margin: 20px auto;
+    min-height: 500px;
+    margin: 0 auto;
     padding: 10px;
     max-width: 800px; 
 }
@@ -104,19 +37,22 @@ a {
 .ActivityContainer>*{
     padding: 10px;
     color: #333333;
+
 }
 
-.ActivityContainer:not(h1,h2,h3){
+.ActivityContainer:not(h1,.select-organizer,h3){
     font-size: var(--main-font-size);
 }
 
-h1{
+.ActivityContainer>h1{
     font-size: 30px;
     margin-bottom: -5px;
 }
 
-h2{
+.select-organizer{
     font-size: 24px;
+    font-weight: 400;
+    text-align: left;
 }
 
 h3{
@@ -129,28 +65,36 @@ h3::after{
     border-top: 1px solid black;
 }
 
-.notice {
+.activity-select>.notice {
     display:inline-block;
-    padding: 15px;
-    background-color: rgb(217, 216, 215);
+    padding: 10px;
+    background-color: rgb(231, 229, 228);
+    border-radius: 3px;
 }
 
 .lined {
-    border-bottom: #c6c6c6 2px solid;
+    font-size: 18px;
+    border-bottom: #666 2px solid;
     padding-bottom: 3px;
-    margin: 10px 0 10px;
+    margin: 15px 0 15px;
+    font-weight: 400;
+    text-align:left;
 }
 
 #organizeList{
     display: inline-block;
     font-size: 15px;
     width: 200px;
-    height: 43px;
-    margin: 10px;
-    margin-top: -10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
 }
 
-.TOSzone a{color: var(--main-color)}
+.TOSzone a{
+    color: var(--main-color-hover);
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
 
 
 .establishBtn{
@@ -162,6 +106,6 @@ h3::after{
     border:none;
     border-radius:5px;
     margin-left: 10px;
+    margin-top: 15px;
 }
-
 

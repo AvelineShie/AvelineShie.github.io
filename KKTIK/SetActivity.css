@@ -79,7 +79,7 @@ li:first-child>a{
 }
 
 /* 所有附註說明 */
-span.note{
+span.note, .map-note{
     display: inline-block;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -97,9 +97,14 @@ span.note{
 }
 
 /* 所有小區塊 */
-.log{
+.online-log, .log{
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.place-log{
+    
 }
 
 /* 所有radio */
@@ -144,6 +149,7 @@ span.note{
     height: 400px; 
     width: 100%; 
     }
+
 
 .ck-editor__editable_inline {
     min-height: 300px;

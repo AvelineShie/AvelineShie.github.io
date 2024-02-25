@@ -1,3 +1,10 @@
+:root {
+    --main-color: #3b7555;
+    --main-color-hover: #77A88D;
+    --second-color: #518f6d;
+    --click-color: #1d5545;
+}
+
 /* 在小屏幕上隱藏側邊欄 */
 @media screen and (max-width: 768px) {
     .sideBarMenu {

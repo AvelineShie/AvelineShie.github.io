@@ -24,12 +24,9 @@
     }
 
     .btn-group{
-        padding-bottom: 30px;
+        /* padding-bottom: 30px; */
     }
 
-    .btn-outline-info{
-        
-    }
 
     #week{
         height: 40px;
@@ -48,6 +45,14 @@
     li:hover{
         cursor: pointer;
     }
+
+    .add-btn{
+        display:inline-block;
+    }
+
+    .btn-area{
+        margin-bottom: 20px;
+    }
     
     </style>
 </head>
@@ -58,14 +63,18 @@
     </div>
 
     <!-- 上下月、今日切換鍵 -->
-    <div class="btn-group" role="group" aria-label="Basic outlined example">
-        <button type="button" class="btn btn-outline-primary last-month-Btn">Last Month</button>
-        <button type="button" class="btn btn-outline-primary todayBtn">Today</button>
-        <button type="button" class="btn btn-outline-primary next-month-Btn">Next Month</button>
+    <div class="btn-area">
+        <div class="btn-group" role="group" aria-label="Basic outlined example">
+            <button type="button" class="btn btn-outline-primary last-month-Btn">Last Month</button>
+            <button type="button" class="btn btn-outline-primary todayBtn">Today</button>
+            <button type="button" class="btn btn-outline-primary next-month-Btn">Next Month</button>
+        </div>
+    
+        <!-- add todo list -->
+        <div class="add-btn">
+            <button type="add-button" class="btn btn-outline-info">+</button>
+        </div>
     </div>
-
-    <!-- add todo list -->
-    <button type="add-button" class="btn btn-outline-info">+</button>
     
     <!-- 月曆區 -->
     <div class="calendar">
